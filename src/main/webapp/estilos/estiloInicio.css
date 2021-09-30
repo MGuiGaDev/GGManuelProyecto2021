@@ -1,0 +1,121 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 26-sep-2021, 6:45:24
+    Author     : Manuel Guillén Gallardo
+*/
+
+*{
+    box-sizing: border-box;
+    color: #262626;
+    font-family: 'Source Code Pro', monospace;
+    margin: 0;
+    padding: 0;
+}
+body{
+    /*at bottom right*/
+   /* background: rgb(100,192,199);
+    background: radial-gradient(at bottom right, rgba(100,192,199,1) 0%, rgb(1, 30, 109) 100%);*/
+    background: #262626;
+    display: flex;
+    flex-direction: column;
+}
+header{
+    align-items: center;
+    background: #161616;
+    display: flex;
+    height: 90px;
+    flex-direction: row;
+    padding: 10px;
+    position: fixed;
+    width: 100%;
+    z-index: 1;
+}
+h1 > a{
+    border: 1px solid #dadada;
+    border-radius: 10px;
+    color: white;
+    padding: 10px;
+    text-decoration: none;
+}
+.logo-github{
+    display: flex;
+    justify-content: flex-end;
+    width: 100%;
+}
+.logo-github img{
+    background: white;
+    border-radius: 10px;
+    padding: 10px;
+    width: 10%;
+    object-fit: cover;
+}
+main{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+    align-items: center;
+    margin: 120px 0 30px;
+}
+.caja{
+    background: white;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    height: 250px;
+    text-decoration: none;
+    width: 300px;
+    margin: 20px;
+    transition: 0.15s ease-in-out;
+}
+.caja:hover{
+    box-shadow: 0 5px 20px rgb(0, 0, 0, 1);
+    transform: translate(0px, -10px);
+}
+.caja-foto{
+    align-items: center;
+    border-bottom: 1px solid #262626;
+    display: flex;
+    justify-content: center;
+    height: 50%;
+}
+.caja-foto img{
+    width: 50%;
+}
+.caja-descripcion{
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    height: 50%;
+}
+.titulo-descripcion{
+    font-size: 22px;
+    padding: 20px 0 5px;
+}
+.descripcion{
+    font-size: 13px;
+    padding: 5px;
+    text-align: center;
+}
+footer{
+    align-items: center;
+    background: #161616;
+    display: flex;
+    height: 120px;
+    padding: 10px;
+    width: 100%;
+}
+.info-pag{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    padding: 20px;
+}
+.info-pag p{
+    color: #dadada;
+    margin: 3px;
+}
