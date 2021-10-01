@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html lang="es">
+
+<head>
+    <title>FORMULARIO</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="../estilos/estiloCreacionFormulario.css" type="text/css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Varela+Round&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <header>
+        <h1><a href="../inicio.html">DWES</a></h1>
+        <a href="https://github.com/MGuiGaDev" class="logo-github" target="_blank"><img
+                src="../imagenes/github.png" /></a>
+    </header>
+    <main>
+        <div class="titulo-pagina">
+            <h2>Crear formulario</h2>
+        </div>
+        <div class="caja">
+            <form action="../DatosFormulario" method="POST">
+                <h2>Encuesta para fin de curso</h2>
+                <label for="nombre">Nombre:</label>
+                <input type="text" id="nombre" name="nombreApellidos" placeholder="Eg.Irantxu Aranguren" tabindex="1">
+                <label for="fecha">Fecha de nacimiento:</label>
+                <input type="date" id="fecha" name="fechaNac">
+                <br>
+                <p>Prefieres:</p>
+                <div>
+                    <input type="checkbox" id="roma" name="ciudad" value="Roma">
+                    <label for="roma" class="label-eleccion">Roma</label>
+                    <input type="checkbox" id="lisboa" name="ciudad" value="Lisboa">
+                    <label for="lisboa" class="label-eleccion">Lisboa</label>
+                    <input type="checkbox" id="acapulco" name="ciudad" value="Acapulco">
+                    <label for="acapulco" class="label-eleccion">Acapulco</label>
+                </div>
+                <p>Eres:</p>
+                <div>
+                    <input type="radio" id="chica" name="sexo" value="Chica" checked="Chica">
+                    <label for="chica" class="label-eleccion">Chica</label>
+                    <input type="radio" id="chico" name="sexo" value="Chico">
+                    <label for="chico" class="label-eleccion">Chico</label>
+                    <input type="radio" id="otro" name="sexo" value="Otro">
+                    <label for="otro" class="label-eleccion">Otro</label>
+                </div>
+                <input type="submit" class="enviar" />
+            </form>
+        </div>
+    </main>
+    <footer>
+        <div class="info-pag">
+            <p>Sitio creado por Manuel Guill&eacute;n Gallardo</p>
+            <p>Alumno de DAW 2</p>
+            <p>30 / 09 / 2021</p>
+        </div>
+    </footer>
+</body>
+
+</html>

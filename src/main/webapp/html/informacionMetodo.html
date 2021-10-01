@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <title>INICIO</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link href="../estilos/estiloInformacionMetodo.css" type="text/css" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Varela+Round&display=swap" rel="stylesheet">
+    </head>
+
+    <body>
+        <header>
+            <h1><a href="../inicio.html">DWES</a></h1>
+            <a href="https://github.com/MGuiGaDev" class="logo-github" target="_blank"><img src="../imagenes/github.png" /></a>
+        </header>
+        <main>
+            <div class="caja">
+                <h2>Llamadas a Servlets</h2>
+                <p><a href="../Informacion">Informaci&oacute;n del contexto</a></p>
+                <p><a href="../MetodoEnvio?saludo=hola&numero=12.8&error=0">Llamadas por el método GET</a></p>
+                <form action="../MetodoEnvio" method="post">
+                    <input type="hidden" name="param1" value="hola mundo"/>
+                    <input type="hidden" name="param2" value="ahora no llueve"/>
+                    <input type="submit" value="Enviar" name="enviar"/>
+                </form>
+            </div>
+        </main>
+        <footer>
+            <div class="info-pag">
+                <p>Sitio creado por Manuel Guillén Gallardo</p>
+                <p>Alumno de DAW 2</p>
+                <p>30 / 09 / 2021</p>
+            </div>
+        </footer>
+    </body>
+
+</html>
