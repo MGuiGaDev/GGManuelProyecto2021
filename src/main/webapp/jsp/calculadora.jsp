@@ -46,7 +46,7 @@ pageEncoding="UTF-8" %>
                 <td><input name="param2"></td>
             </tr>
             <tr>
-                <td><input type="submit" value="Sumar"></td>
+                <td><input type="submit" value="Sumar" class="volver"></td>
                 </tr>
         </table>
     </form>
@@ -66,7 +66,7 @@ pageEncoding="UTF-8" %>
         }
     %>
     <p><%= Calendar.getInstance().getTime() %></p>
-    <a href="calculadora.jsp">Volver atrás...</a>
+    <a href="calculadora.jsp" class="volver">Volver atrás...</a>
     <%
         }
     %>
