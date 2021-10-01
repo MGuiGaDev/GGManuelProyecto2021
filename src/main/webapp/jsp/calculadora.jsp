@@ -35,21 +35,21 @@ pageEncoding="UTF-8" %>
         if(request.getParameter("switch") == null){
         %>
         <form method="post" action="calculadora.jsp" >
-        <input type="hidden" name="switch" value="true">
-        <table>
-            <tr>
-                <td>Primer número:</td>
-                <td><input name="param1"></td>
-            </tr>
-            <tr>
-                <td>Segundo número:</td>
-                <td><input name="param2"></td>
-            </tr>
-            <tr>
-                <td><input type="submit" value="Sumar" class="volver"></td>
+            <input type="hidden" name="switch" value="true">
+            <table>
+                <tr>
+                    <td>Primer número:</td>
+                    <td><input name="param1"></td>
                 </tr>
-        </table>
-    </form>
+                <tr>
+                    <td>Segundo número:</td>
+                    <td><input name="param2"></td>
+                </tr>
+                <tr>
+                    <td><input type="submit" value="Sumar" class="volver"></td>
+                </tr>
+            </table>
+        </form>
     <%
         } else {
         try {

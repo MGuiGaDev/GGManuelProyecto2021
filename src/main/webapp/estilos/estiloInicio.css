@@ -67,6 +67,19 @@ main{
     align-items: center;
     margin: 120px 0 30px;
 }
+.contenedor{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 50%;
+    height: 100%;
+}
+.contenedor h1 {
+    color: white;
+    font-size: 40px;
+    text-align: center;
+    width: 100%;
+}
 .caja{
     background: white;
     border-radius: 10px;
@@ -74,7 +87,7 @@ main{
     flex-direction: column;
     height: 250px;
     text-decoration: none;
-    width: 300px;
+    width: 280px;
     margin: 20px;
     transition: 0.15s ease-in-out;
 }
