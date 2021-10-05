@@ -136,12 +136,15 @@
 - **Funcionalidad**:
 - **Finalidad**:
 
+![saludoFormulario.PNG](imagenesReadme/saludoFormulario.PNG)
+![saludoRespuesta.PNG](imagenesReadme/saludoRespuesta.PNG)
 ### Edad de una persona
 
 - **Archivos**:
 - **Funcionalidad**:
 - **Finalidad**:
-
+![edadForm.PNG](imagenesReadme/edadForm.PNG)
+![edadRespuesta.PNG](imagenesReadme/edadRespuesta.PNG)
 ### Calculadora básica
 
 - **Archivos**:
