@@ -51,7 +51,7 @@
 
 ![cicloDeVida](imagenesReadme/cicloDeVida.PNG)
 
-![image-20211005094630332](C:\Users\manue\AppData\Roaming\Typora\typora-user-images\image-20211005094630332.png)
+![image-20211005094630332](imagenesReadme/estoyEnInit.PNG)
 
 ### 
 
@@ -62,7 +62,7 @@
 
 - **Finalidad:** Pasar parámetros mediante ``href`` y ``method:post`` a nuestro ``servlet``. Este hecho determina que para el manejo de nuestros datos debamos usar convenientemente los métodos ``doGet()`` y ``doPost()``. 
 
-![enumerationFormularioSimple](C:\Users\manue\OneDrive\Escritorio\DAW2_APUNTES\WORKSPACE_NETBEANS\GGManuelProyecto2021\imagenesReadme\enumerationFormularioSimple.png)
+![enumerationFormularioSimple](imagenesReadme/codigoDatosFormulario.png)
 
 ### Formulario Complejo
 
@@ -72,13 +72,13 @@
 
 
 
-![formularioComplejo](C:\Users\manue\OneDrive\Escritorio\DAW2_APUNTES\WORKSPACE_NETBEANS\GGManuelProyecto2021\imagenesReadme\formularioComplejo.PNG)
+![formularioComplejo](imagenesReadme/formularioComplejo.PNG)
 
 
 
-![datosFormulario](C:\Users\manue\OneDrive\Escritorio\DAW2_APUNTES\WORKSPACE_NETBEANS\GGManuelProyecto2021\imagenesReadme\datosFormulario.PNG)
+![datosFormulario](imagenesReadme/datosFormulario.PNG)
 
-![codigoDatosFormulario](C:\Users\manue\OneDrive\Escritorio\DAW2_APUNTES\WORKSPACE_NETBEANS\GGManuelProyecto2021\imagenesReadme\codigoDatosFormulario.png)
+![codigoDatosFormulario](imagenesReadme/codigoDatosFormulario.png)
 
 ### Reservas
 
