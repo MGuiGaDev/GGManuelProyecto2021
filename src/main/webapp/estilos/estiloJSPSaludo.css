@@ -4,7 +4,7 @@ To change this template file, choose Tools | Templates
 and open the template in the editor.
 */
 /* 
-    Created on : 26-sep-2021, 6:45:24
+    Created on : 04-oct-2021, 23:03:20
     Author     : Manuel Guillén Gallardo
 */
 
@@ -61,69 +61,49 @@ h1 > a:hover{
 }
 main{
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     justify-content: center;
     flex-wrap: wrap;
-    align-items: flex-start;
+    min-height: 400px;
+    align-items: center;
     margin: 120px 0 30px;
 }
-.contenedor{
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    width: 50%;
-    height: 100%;
-}
-.contenedor h1 {
-    color: white;
-    font-size: 40px;
-    padding: 20px;
-    text-align: center;
-    width: 100%;
-}
-.caja{
+.form{
     background: white;
     border-radius: 10px;
     display: flex;
     flex-direction: column;
-    height: 250px;
-    text-decoration: none;
-    width: 280px;
+    height: 199px;
     margin: 20px;
-    transition: 0.15s ease-in-out;
+    justify-content: space-between;
+    padding: 20px;
+    text-decoration: none;
+    width: 300px;
 }
-.caja:hover{
-    box-shadow: 0 5px 20px rgb(0, 0, 0, 1);
-    transform: translate(0px, -10px);
-}
-.caja-foto{
-    align-items: center;
-    border-bottom: 5px solid #262626;
-    display: flex;
-    justify-content: center;
-    height: 50%;
-}
-.caja-foto img{
-    width: 50%;
-}
-.jsp-img{
-    height: 80%;
-}
-.caja-descripcion{
-    align-items: center;
-    display: flex;
-    flex-direction: column;
-    height: 50%;
-}
-.titulo-descripcion{
-    font-size: 22px;
-    padding: 20px 0 5px;
-}
-.descripcion{
-    font-size: 13px;
+input{
     padding: 5px;
-    text-align: center;
 }
+.radio, .nombre{
+    padding: 5px;
+}
+
+.enviar{
+    background: rgb(104,150,181);
+    border: none;
+    border-radius: 10px;
+    box-shadow: 0 1px 4px rgb(0, 0, 0, 0.5);
+    color: white;
+    cursor: pointer;
+    font-size: 20px;
+    margin-top: 5px;
+    padding: 10px;
+    text-align: center;
+    text-decoration: none;
+}
+.enviar:hover{
+    box-shadow: none;
+}
+
 footer{
     align-items: center;
     background: #161616;
@@ -141,6 +121,5 @@ footer{
 }
 .info-pag p{
     color: #dadada;
-    font-size: 14px;
     margin: 3px;
 }

@@ -73,15 +73,15 @@ main{
     border-radius: 10px;
     display: flex;
     flex-direction: column;
-    height: 250px;
-    justify-content: space-between;
+    height:180px;
+    justify-content: center;
     padding: 50px;
     text-decoration: none;
     width: 450px;
     margin: 20px;
 }
-.caja p, td {
-    margin: 15px 0 15px;
+.caja form{
+    height: 100%;
 }
 .volver{
     background: rgb(104,150,181);
