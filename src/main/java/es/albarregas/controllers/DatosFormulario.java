@@ -92,7 +92,7 @@ public class DatosFormulario extends HttpServlet {
                         out.println("<p>"+ valores +"</p>"); 
                         break;
                     case "ciudad":
-                        out.println("<h3>Aficiones</h3>");
+                        out.println("<h3>Prefieres</h3>");
                         out.println("<p>"+ valores +"</p>");
                         break;
                     case "sexo":
