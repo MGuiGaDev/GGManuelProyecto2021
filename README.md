@@ -49,7 +49,7 @@
 
 - **Finalidad**: Añadir un mensaje distinto de tipo ``System.out``  a cada uno de estos métodos: ``init(ServletConfig config);`` ,  ``service(ServletRequest request, ServletResponse response);`` y `` destroy()``. De este modo, al inicializar nuestro Servlet desde el archivo ``.html``, si observamos la consola podemos ver como cambia aparece un mensaje según el estado: inicializado por primera vez (``init``), inicializado más de una vez (``service``), finalizado (``destroy``).
 
-![cicloDeVida](C:\Users\manue\OneDrive\Escritorio\DAW2_APUNTES\WORKSPACE_NETBEANS\GGManuelProyecto2021\imagenesReadme\cicloDeVida.PNG)
+![cicloDeVida](imagenesReadme/cicloDeVida.PNG)
 
 ![image-20211005094630332](C:\Users\manue\AppData\Roaming\Typora\typora-user-images\image-20211005094630332.png)
 
