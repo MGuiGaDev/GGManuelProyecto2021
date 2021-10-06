@@ -42,8 +42,21 @@
                     return saludoFinal;
                 }
             %>
+            <!--
+                OJO A LA SOLUCIÓN DE CLASE
+                [et.jsp]% 
+            
+                    String tratamiento = null;
+                    tratamiento = request.getParameter("sexo").equals("hombre") ? "señor":"señora";
+                    int hora = LocalTime.now().getHour();
+                    String saludo = null;
+                    if(...
+            
+                %[et.jsp]
+                [et.html]p  Buen [et.jsp]% saludo %[et.jsp]  [et.jsp]% tratamiento %[et.jsp]        p[et.html]
+            -->
             <%
-                if (request.getParameter("switch") == null) {
+                if (request.getParameter("switch") != null) {
             %>
 
             <form method="post" action="saludo.jsp" class="form">
@@ -54,7 +67,8 @@
                 </div>
                 <div class="radio">
                     <p>Sexo:</p>
-                    <input type="checkbox" id="hombre" name="param2" value="hombre">
+                    <!-- checked  -->
+                    <input type="checkbox" id="hombre" name="param2" value="hombre" checked="checked">
                     <label for="hombre" class="label-eleccion">Hombre</label>
                     <input type="checkbox" id="mujer" name="param2" value="mujer">
                     <label for="mujer" class="label-eleccion">Mujer</label>

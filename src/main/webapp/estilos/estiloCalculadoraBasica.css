@@ -1,0 +1,239 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 05-oct-2021, 21:02:25
+    Author     : Manuel Guillén Gallardo
+*/
+input[type="radio"]{
+  appearance: none;
+}
+input[type="radio"] + p{
+  cursor: pointer;
+}
+input[type=radio]:checked{
+    box-shadow: none;
+}
+.im {
+    position: relative;
+    font-size: 20px;
+    top: -55px;
+    left: 50px;
+    color: white;
+    user-select: none;
+}
+*{
+    box-sizing: border-box;
+    color: #262626;
+    font-family: 'Varela Round', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+body{
+    background: #262626;
+    display: flex;
+    flex-direction: column;
+}
+header{
+    align-items: center;
+    background: radial-gradient(at top, rgba(153,178,195,1) 0%, rgba(104,150,181,1) 100%);
+    box-shadow: 0 5px 5px rgb(0, 0, 0, 0.5);
+    display: flex;
+    height: 90px;
+    flex-direction: row;
+    padding: 10px;
+    position: fixed;
+    width: 100%;
+    z-index: 1;
+}
+h1 > a{
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 5px 5px rgb(0, 0, 0, 0.5);
+    color: black;
+    padding: 10px;
+    text-decoration: none;
+}
+h1 > a:hover{
+    box-shadow: none;
+}
+.logo-github{
+    display: flex;
+    justify-content: flex-end;
+    width: 100%;
+}
+.logo-github img{
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 5px 10px rgb(0, 0, 0, 0.5);
+    padding: 10px;
+    width: 150px;
+    object-fit: cover;
+}
+.logo-github img:hover{
+    box-shadow: none;
+}
+main{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    flex-wrap: wrap;
+    min-height: 400px;
+    align-items: center;
+    margin: 80px 0 30px;
+}
+.caja{
+    background: white;
+    border-radius: 15px;
+    box-shadow: inset 0px -5px 7px 3px rgb(0 0 0 / 0.5);
+    display: flex;
+    height: 520px;
+    padding: 40px;
+    width: 880px;
+    margin: 50px 0 20px;
+}
+
+.resultado {
+    padding: 10px;
+}
+
+form {
+    border: 2px solid #113b5b;
+    border-radius: 15px;
+    background: #798898;
+    height: 100%;
+    width: 100%;
+}
+.cabecera {
+    background: #37475F;
+    border-top-right-radius: 10px;
+    border-top-left-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 30%;
+    padding: 20px;
+    width: 100%;
+}
+.cabecera h1{
+    display:flex;
+    justify-content: center;
+    font-size: 50px;
+    font-weight: lighter;
+    color: white;
+    text-align: center;
+}
+.cuerpo {
+    box-shadow: 0px -6px 7px -1px rgba(0,0,0,0.36);
+    display: flex;
+    flex-direction: row;
+    height: 45%;
+    width: 100%;
+}
+
+.primero, .segundo{
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 20px;
+    height: 100%;
+    width: 30%;
+}
+.primero > label, .segundo > label {
+    color: white;
+    font-size: 18px;
+    font-weight: bolder;
+}
+.primero > input, .segundo > input {
+    background: #37475F;
+    border-style: solid;
+    border-width: 2px;
+    /*border: 5px solid #49ff8f #164b73;*/
+    border-color:#164b73;
+    border-radius: 5px;
+    color: white;
+    font-size: 40px;
+     outline: none;
+    padding: 5px;
+    text-align: center;
+    width: 100%;
+}
+input[type=number]::-webkit-inner-spin-button, 
+input[type=number]::-webkit-outer-spin-button { 
+  -webkit-appearance: none; 
+  margin: 0; 
+}
+.operadores{
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 40%;
+}
+.op {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    height: 70px;
+    margin: 10px;
+    font-size: 30px;
+    width: 95px;
+}
+.pie{
+    align-items: center;
+    border-bottom-left-radius:  15px;
+    border-bottom-right-radius:  15px;
+    display: flex;
+    height: 25%;
+    justify-content: space-between;
+    width: 100%;
+}
+.nav {
+    font-size: 20px;
+    margin: 0 38px 0;
+    padding: 20px;
+    width: 175px;
+}
+
+.boton {
+    background: #798898;
+    border-radius: 20px;
+    box-shadow: 
+    3px 3px 6px 0 rgba(0, 0, 0, 0.25),
+    -0.5px -0.5px 0.5px 0 rgba(255, 255, 255, 0.3);
+    color: white;
+    cursor: pointer;
+    border: 1px solid rgb(255,255,255, 0.1);
+    transition: all .1s ease;
+}
+.boton:hover{
+    box-shadow: none;
+}
+.boton:focus{
+    background: transparent;
+}
+
+footer{
+    align-items: center;
+    background: #161616;
+    border-top: 1px solid #dadada;
+    display: flex;
+    height: 120px;
+    padding: 10px;
+    width: 100%;
+}
+.info-pag{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    padding: 20px;
+}
+.info-pag p{
+    color: #dadada;
+    margin: 3px;
+}
