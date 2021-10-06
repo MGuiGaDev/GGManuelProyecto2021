@@ -54,44 +54,45 @@
                     }
                     return resultado;
                 }
-                public boolean validarNoCero(int paramNumDos, String seleccionado){
-                    
-                    if(paramNumDos == 0 && seleccionado.equals("/"))
+
+                public boolean validarNoCero(int paramNumDos, String seleccionado) {
+
+                    if (paramNumDos == 0 && seleccionado.equals("/")) {
                         return false;
+                    }
                     return true;
                 }
             %>  
 
             <div class="caja">
-                
+
                 <form method="post" action="calculadoraBasica.jsp">
                     <%  String resultado = "";
-                        if(request.getParameter("switch")!=null){
-                        
-                        Calendar m = Calendar.getInstance(); 
-                        int dia = m.get(Calendar.DAY_OF_MONTH);
-                        String month =  m.getDisplayName(Calendar.MONTH, Calendar.LONG, Locale.getDefault());
-                        int annio = m.get(Calendar.YEAR);
-                        String num1 = request.getParameter("primerOperando");
-                        String num2 = request.getParameter("segundoOperando");
-                        String operSelComp = request.getParameter("operacion");
-                        boolean validado = comprobarNull(num1, num2, operSelComp);
-                        if(validado == true) {
-                            Integer primOpNum = Integer.parseInt(request.getParameter("primerOperando"));
-                            Integer segOpNum = Integer.parseInt(request.getParameter("segundoOperando"));
-                            String operacionSeleccionada = request.getParameter("operacion");
-                            resultado= !validarNoCero(segOpNum, operacionSeleccionada)?"Calculando... espere cinco segundos, "
-                            + "si no ha encontrado respuesta, realice una nueva operación." : dia + " de " + month + " de " + " " + annio + " <br> " +
-                                    primOpNum + " " + operacionSeleccionada + " " + segOpNum + " = " + buscarOp(operacionSeleccionada, primOpNum, segOpNum);
+                        if (request.getParameter("switch") != null) {
+
+                            Calendar m = Calendar.getInstance();
+                            int dia = m.get(Calendar.DAY_OF_MONTH);
+                            String month = m.getDisplayName(Calendar.MONTH, Calendar.LONG, Locale.getDefault());
+                            int annio = m.get(Calendar.YEAR);
+                            String num1 = request.getParameter("primerOperando");
+                            String num2 = request.getParameter("segundoOperando");
+                            String operSelComp = request.getParameter("operacion");
+                            boolean validado = comprobarNull(num1, num2, operSelComp);
+                            if (validado == true) {
+                                Integer primOpNum = Integer.parseInt(request.getParameter("primerOperando"));
+                                Integer segOpNum = Integer.parseInt(request.getParameter("segundoOperando"));
+                                String operacionSeleccionada = request.getParameter("operacion");
+                                resultado = !validarNoCero(segOpNum, operacionSeleccionada) ? "Calculando... espere cinco segundos, "
+                                        + "si no ha encontrado respuesta, realice una nueva operación." : dia + " de " + month + " de " + " " + annio + " <br> "
+                                        + primOpNum + " " + operacionSeleccionada + " " + segOpNum + " = " + buscarOp(operacionSeleccionada, primOpNum, segOpNum);
+                            } else {
+                                resultado = "Introduce los números, elige una operación y envía...";
+                            }
                         }
-                        else {
-                            resultado = "Introduce los números, elige una operación y envía...";
-                        }
-                    }
                     %>
                     <input type="hidden" name="switch" value="true">
                     <div class="cabecera">
-                        <h1 name="resultado"><%= resultado  %></h1>
+                        <h1 name="resultado"><%= resultado%></h1>
                     </div>
                     <div class="cuerpo">
                         <div class="primero">
@@ -121,13 +122,12 @@
                             <input type="number" name="segundoOperando" id="segundoOperando" />
                         </div>
                     </div>
-                    <div class="pie">
-                        <button onclick="javascript:location.href = '../inicio.html'" class="boton nav">Inicio</button>
-                        <button type="submit" class="boton nav" name="enviar">Enviar</button>
-                        <input type="reset" value="Limpiar" class="boton nav" />
-                    </div>
                 </form>
-                    
+                <div class="pie">
+                    <button onclick="javascript:location.href = '../inicio.html'" class="boton nav">Inicio</button>
+                    <button type="submit" class="boton nav" name="enviar">Enviar</button>
+                    <input type="reset" value="Limpiar" class="boton nav" />
+                </div>
             </div>
             <h1 class="respuesta">Debe completar todos los campos correctamente...</h1>
 
