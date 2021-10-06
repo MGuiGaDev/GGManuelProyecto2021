@@ -56,7 +56,7 @@
                 }
                 public boolean validarNoCero(int paramNumDos, String seleccionado){
                     
-                    if(paramNumDos == 0 && seleccionado.equals("dividir"))
+                    if(paramNumDos == 0 && seleccionado.equals("/"))
                         return false;
                     return true;
                 }
@@ -80,8 +80,8 @@
                             Integer primOpNum = Integer.parseInt(request.getParameter("primerOperando"));
                             Integer segOpNum = Integer.parseInt(request.getParameter("segundoOperando"));
                             String operacionSeleccionada = request.getParameter("operacion");
-                            resultado= !validarNoCero(segOpNum, operacionSeleccionada)?"<p>Calculando... espere cinco segundos, "
-                            + "si no ha encontrado respuesta, realice una nueva operación.<p>" : dia + " de " + month + " de " + " " + annio + " <br> " +
+                            resultado= !validarNoCero(segOpNum, operacionSeleccionada)?"Calculando... espere cinco segundos, "
+                            + "si no ha encontrado respuesta, realice una nueva operación." : dia + " de " + month + " de " + " " + annio + " <br> " +
                                     primOpNum + " " + operacionSeleccionada + " " + segOpNum + " = " + buscarOp(operacionSeleccionada, primOpNum, segOpNum);
                         }
                         else {
