@@ -1,0 +1,150 @@
+/**
+ * @author [Manuel Guillén Gallardo]
+ * @email [mguigadev@gmail.com]
+ * @create date 07-10-2021 15:17:43
+ * @modify date 07-10-2021 15:19:08
+ * @desc [description]
+ */
+
+*{
+    background-color: #111111;
+    box-sizing: border-box;
+    color: #262626;
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+}
+body{
+    display: flex;
+    flex-direction: column;
+    font-family: 'Prompt', sans-serif;
+}
+header{
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    padding: 15px;
+    text-decoration: none;
+    width: 100%;
+}
+.search{
+    align-items: center;
+    display: flex;
+    justify-content: center;
+}
+.search input{
+    border: none;
+    border-bottom: 1px solid #727272;
+    color: white;
+    font-size: 16px;
+    padding: 5px;
+    margin-right: 5px;
+}
+.search input:focus{
+    border-bottom:1px solid white;
+    outline: none;
+}
+.search button{
+    border: none;
+    
+    cursor: pointer;
+    color: #727272;
+}
+.search button:hover{
+    color: white;
+}
+.logo{
+    display: flex;
+    flex-direction: column;
+    text-decoration: none;
+}
+.logo h1,.logo p{
+    color: white;
+    text-align: center;
+}
+.logo h1{
+    font-family: 'Permanent Marker', cursive;
+    font-size: 100px;
+    font-weight: 100;
+    text-shadow: 0.3rem 0.3rem 0.3rem black;
+}
+.espacio-hub{
+    display: flex;
+    justify-content: center;
+}
+.logo-github i, .logo-java i{
+    color: #727272;
+    font-size: 25px;
+    margin: 0 15px 0;
+}
+.logo-github i:hover, .logo-java i:hover{
+    color: white;
+}
+header nav {
+    align-items: center;
+    display: flex;
+    justify-content: space-around;
+    height: auto;
+    width: 100%;
+}
+header nav a{
+    align-items: center;
+    color: #727272;
+    display: flex;
+    font-size: 20px;
+    justify-content: center;
+    height: auto;
+    padding: 10px;
+    text-decoration: none;
+    width: auto;
+}
+.menu {
+    display: flex;
+    flex-direction: row;
+    font-size: 20px;
+    justify-content: center;
+    margin-top: 50px;
+    width: 100%;
+}
+.menu a {
+    color: #727272;
+    margin: 0 80px 0;
+}
+nav a:hover{
+    color: white;
+}
+/***********************/
+main{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin: 100px 0 60px;
+}
+
+
+
+/****************************/
+footer{
+    align-items: center;
+    border-top: 1px solid #dadada;
+    display: flex;
+    height: 120px;
+    padding: 15px;
+    width: 100%;
+}
+footer, footer .info-pag, footer p{
+    background: black;
+}
+.info-pag{
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    justify-content: space-around;
+    padding: 20px;
+    width: 100%;
+}
+.info-pag p{
+    color: #0bfe50;
+    font-size: 14px;
+    margin: 3px;
+}

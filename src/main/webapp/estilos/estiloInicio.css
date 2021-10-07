@@ -9,64 +9,233 @@ and open the template in the editor.
 */
 
 *{
+    background-color: #111111;
     box-sizing: border-box;
     color: #262626;
-    font-family: 'Varela Round', sans-serif;
     margin: 0;
     padding: 0;
+    text-decoration: none;
 }
 body{
-    background: #262626;
     display: flex;
     flex-direction: column;
+    font-family: 'Prompt', sans-serif;
 }
 header{
     align-items: center;
-    background: radial-gradient(at top, rgba(153,178,195,1) 0%, rgba(104,150,181,1) 100%);
-    box-shadow: 0 5px 5px rgb(0, 0, 0, 0.5);
     display: flex;
-    height: 90px;
     flex-direction: row;
-    padding: 10px;
-    position: fixed;
+    padding: 15px;
+    text-decoration: none;
     width: 100%;
-    z-index: 1;
 }
-h1 > a{
-    background: white;
-    border-radius: 10px;
-    box-shadow: 0 5px 5px rgb(0, 0, 0, 0.5);
-    color: black;
-    padding: 10px;
+.search{
+    align-items: center;
+    display: flex;
+    justify-content: center;
+}
+.search input{
+    border: none;
+    border-bottom: 1px solid #727272;
+    color: white;
+    font-size: 16px;
+    padding: 5px;
+    margin-right: 5px;
+}
+.search input:focus{
+    border-bottom:1px solid white;
+    outline: none;
+}
+.search button{
+    border: none;
+    
+    cursor: pointer;
+    color: #727272;
+}
+.search button:hover{
+    color: white;
+}
+.logo{
+    display: flex;
+    flex-direction: column;
     text-decoration: none;
 }
-h1 > a:hover{
-    box-shadow: none;
+.logo h1,.logo p{
+    color: white;
+    text-align: center;
 }
-.logo-github{
+.logo h1{
+    font-family: 'Permanent Marker', cursive;
+    font-size: 100px;
+    font-weight: 100;
+    text-shadow: 0.3rem 0.3rem 0.3rem black;
+}
+.espacio-hub{
     display: flex;
-    justify-content: flex-end;
+    justify-content: center;
+}
+.logo-github i, .logo-java i{
+    color: #727272;
+    font-size: 25px;
+    margin: 0 15px 0;
+}
+.logo-github i:hover, .logo-java i:hover{
+    color: white;
+}
+header nav {
+    align-items: center;
+    display: flex;
+    justify-content: space-around;
+    height: auto;
     width: 100%;
 }
-.logo-github img{
-    background: white;
-    border-radius: 10px;
-    box-shadow: 0 5px 10px rgb(0, 0, 0, 0.5);
+header nav a{
+    align-items: center;
+    color: #727272;
+    display: flex;
+    font-size: 20px;
+    justify-content: center;
+    height: auto;
     padding: 10px;
-    width: 150px;
-    object-fit: cover;
+    text-decoration: none;
+    width: auto;
 }
-.logo-github img:hover{
-    box-shadow: none;
+.menu {
+    display: flex;
+    flex-direction: row;
+    font-size: 20px;
+    justify-content: center;
+    margin-top: 50px;
+    width: 100%;
 }
+.menu a {
+    color: #727272;
+    margin: 0 80px 0;
+}
+nav a:hover{
+    color: white;
+}
+/***********************/
 main{
     display: flex;
     flex-direction: row;
     justify-content: center;
-    flex-wrap: wrap;
-    align-items: flex-start;
-    margin: 120px 0 30px;
+    margin: 100px 0 60px;
 }
+aside, section{
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+}
+section p, section a{
+    color: #727272;
+    font-weight: lighter;
+}
+aside h2, section h2 {
+    color: white;
+    margin-bottom: 20px;
+    font-size: 35px;
+}
+aside{
+    display: flex;
+    flex-direction: column;
+    width: 25%;
+}
+aside a {
+    background: #230653;
+    border: 2px solid transparent;
+    border-radius: 5px;
+    box-shadow:0.1rem 0.5rem 0.8rem black;
+    color: white;
+    margin: 10px 0 10px;
+    padding: 10px;
+    text-align: center;
+    width: 200px;
+}
+aside a:hover {
+    background: #480ca8;
+    border: 2px solid white;
+}
+
+section {
+    height: 100%;
+    width: 50%;
+}
+
+/***************************/
+.seleccionados{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.articulo{
+    display: flex;
+    flex-direction: row;
+    margin: 20px 0 70px;
+}
+.imagen{
+    display: flex;
+    justify-content: center;
+    width: 50%;
+}
+.imagen img {
+    border-top-left-radius: 400px;
+    border-top-right-radius: 40px;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 200px;
+    box-shadow:0.8rem 0.8rem 0.8rem black;
+    cursor: pointer;
+    filter: opacity(60%);
+    width: 90%;
+}
+.imagen img:hover{
+    filter: opacity(100%);
+}
+.dos img{
+    border-radius: 10px;
+    box-shadow:0.8rem 0.8rem 0.8rem black;
+    width: 100%;
+}
+.texto{
+    align-items: center;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    width: 50%;
+}
+.texto h2{
+    font-size: 22px;
+    margin: 5px;
+}
+.texto a {
+    background: #230653;
+    border: 2px solid transparent;
+    border-radius: 5px;
+    box-shadow:0.1rem 0.5rem 0.8rem black;
+    color: white;
+    margin: 10px 0 10px;
+    padding: 15px;
+    text-align: center;
+    text-decoration: none;
+}
+.texto a:hover {
+    background: #480ca8;
+    border: 2px solid white;
+}
+
+
+
+
+
+
+
+
+
+
+
+
 .contenedor{
     display: flex;
     flex-direction: row;
@@ -82,8 +251,9 @@ main{
     width: 100%;
 }
 .caja{
-    background: white;
-    border-radius: 10px;
+    background: linear-gradient(90deg, rgba(7,4,65,1) 0%, rgba(20,74,139,1) 45%, rgba(89,0,77,1) 100%);
+    border: 1px solid #727272;
+    border-radius: 20px;
     display: flex;
     flex-direction: column;
     height: 250px;
@@ -98,7 +268,10 @@ main{
 }
 .caja-foto{
     align-items: center;
-    border-bottom: 5px solid #262626;
+    background: white;
+    border-bottom: 1px solid #727272;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
     display: flex;
     justify-content: center;
     height: 50%;
@@ -111,36 +284,48 @@ main{
 }
 .caja-descripcion{
     align-items: center;
+    background:  transparent;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
     display: flex;
     flex-direction: column;
     height: 50%;
 }
 .titulo-descripcion{
+    background: transparent;
+    color: #727272;
     font-size: 22px;
     padding: 20px 0 5px;
 }
 .descripcion{
+    background: transparent;
+    color: #727272;
     font-size: 13px;
     padding: 5px;
     text-align: center;
+    width: 100%;
 }
 footer{
     align-items: center;
-    background: #161616;
     border-top: 1px solid #dadada;
     display: flex;
     height: 120px;
-    padding: 10px;
+    padding: 15px;
     width: 100%;
+}
+footer, footer .info-pag, footer p{
+    background: black;
 }
 .info-pag{
     display: flex;
     flex-direction: column;
+    height: 100%;
     justify-content: space-around;
     padding: 20px;
+    width: 100%;
 }
 .info-pag p{
-    color: #dadada;
+    color: #0bfe50;
     font-size: 14px;
     margin: 3px;
 }

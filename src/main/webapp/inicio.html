@@ -1,132 +1,81 @@
 <!DOCTYPE html>
 <html lang="es">
 
-    <head>
-        <title>INICIO</title>
-        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <link href="estilos/estiloInicio.css" type="text/css" rel="stylesheet">
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link href="https://fonts.googleapis.com/css2?family=Varela+Round&display=swap" rel="stylesheet">
-    </head>
+<head>
+    <title>INICIO</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <link href="estilos/estiloInicio.css" type="text/css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Prompt:wght@200&family=Permanent+Marker&display=swap"
+        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="shortcut icon" href="imagenes/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+        integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
 
-    <body>
-        <header>
-            <h1><a href="inicio.html">DWES</a></h1>
-            <a href="https://github.com/MGuiGaDev" class="logo-github" target="_blank"><img src="imagenes/github.png" /></a>
-        </header>
-        <main>
-            <!-- ./html/creacionFormulario.html [EN CONSTRUCCION]-->
-            <div class="contenedor">
-                <h1>SERVLETS</h1>
-            </div>
-            <div class="contenedor">
-                <h1>JSP</h1>
-            </div>
-            <div class="contenedor">
-                <a class="caja" href="html/cicloDeVida.html">
-                    <div class="caja-foto">
-                        <img src="imagenes/servlet-featured-image.png" alt="" />
-                    </div>
-                    <div class="caja-descripcion">
-                        <p class="titulo-descripcion">Ciclo de vida</p>
-                        <p class="descripcion">Aprendemos como funciona la instanciación de Servlets.</p>
-                    </div>
-                </a>
-                <a class="caja" href="html/informacionMetodo.html">
-                    <div class="caja-foto">
-                        <img src="imagenes/servlet-featured-image.png" alt="" />
-                    </div>
-                    <div class="caja-descripcion">
-                        <p class="titulo-descripcion">Información y Método</p>
-                        <p class="descripcion">Aprendemos cómo se gestionan peticiones con los métodos GET y POST.</p>
-                    </div>
-                </a>
-                <a class="caja" href="html/creacionFormulario.html">
-                    <div class="caja-foto">
-                        <img src="imagenes/servlet-featured-image.png" alt="" />
-                    </div>
-                    <div class="caja-descripcion">
-                        <p class="titulo-descripcion">Primer Formulario</p>
-                        <p class="descripcion">El formulario recoge: nombre (text), fecha de nacimiento (date), aficiones
-                            (checkbox) y sexo (radio).</p>
-                    </div>
-                </a>
-                <a class="caja" href="CabeceraPeticion">
-                    <div class="caja-foto">
-                        <img src="imagenes/servlet-featured-image.png" alt="">
-                    </div>
-                    <div class="caja-descripcion">
-                        <p class="titulo-descripcion">Request Header</p>
-                        <p class="descripcion">Tomamos informaci&oacute;n de solicitud:<br> host, connection, user-agent...</p>
-                    </div>
-                </a>
-                <a class="caja" href="CabeceraPeticion">
-                    <div class="caja-foto">
-                        <img src="imagenes/servlet-featured-image.png" alt="">
-                    </div>
-                    <div class="caja-descripcion">
-                        <p class="titulo-descripcion">...</p>
-                        <p class="descripcion">...</p>
-                    </div>
-                </a>
-            </div>
+</head>
 
-            <div class="contenedor">
-                <a class="caja" href="jsp/calculadora.jsp">
-                    <div class="caja-foto">
-                        <img src="imagenes/java-jsp.png" alt="" class="jsp-img">
+<body>
+    <header>
+        <nav class="search">
+            <input type="text" placeholder="Eg. Formulario" id="buscador">
+            <a href="" class="material-icons" id="boton-buscador">search</a>
+        </nav>
+        <a href="inicio.html" class="logo">
+            <h1>DweS</h1>
+            <p>Desarrollo web en entorno servidor</p>
+        </a>
+        <nav class="espacio-hub">
+            <a href="https://github.com/MGuiGaDev" class="logo-github" target="_blank" title="Repositorio DWES"><i
+                    class="fab fa-github"></i></a>
+            <a href="https://docs.oracle.com/javaee/7/api/toc.htm" class="logo-java" target="_blank"
+                title="API Java 7 EE"><i class="fab fa-java"></i> </a>
+        </nav>
+    </header>
+    <nav class="menu">
+        <a href="#">Inicio</a>
+        <a href="#">Notas</a>
+    </nav>
+    <main>
+        <!-- ./html/creacionFormulario.html [EN CONSTRUCCION]-->
+        <aside>
+            <h2>SERVLETS</h2>
+            <a href="html/cicloDeVida.html">Ciclo de vida</a>
+            <a href="html/informacionMetodo.html">Información y Método</a>
+            <a href="html/creacionFormulario.html">Primer Formulario</a>
+            <a href="CabeceraPeticion">Request Header</a>
+        </aside>
+        <section>
+            <h2>SELECCIÓN</h2>
+            <div class="seleccionados">
+                <article class="articulo">
+                    <div class="texto">
+                        <h2>Primer formulario</h2>
+                        <p>Recogemos datos del usuario en distintos tipos de "input": text, date, number...</p>
+                        <a href="html/creacionFormulario.html">Visitar</a>
                     </div>
-                    <div class="caja-descripcion">
-                        <p class="titulo-descripcion">Primer JSP</p>
-                        <p class="descripcion">Creamos una página JSP con funcionalidad...</p>
+                    <div class="imagen dos">
+                        <img src="imagenes/form.jpg" alt="">
                     </div>
-                </a>
-                <a class="caja" href="jsp/saludo.jsp">
-                    <div class="caja-foto">
-                        <img src="imagenes/java-jsp.png" alt="" class="jsp-img">
-                    </div>
-                    <div class="caja-descripcion">
-                        <p class="titulo-descripcion">Saludador</p>
-                        <p class="descripcion">Programa que saluda según sexo y nombre...</p>
-                    </div>
-                </a>
-                <a class="caja" href="jsp/edad.jsp">
-                    <div class="caja-foto">
-                        <img src="imagenes/java-jsp.png" alt="" class="jsp-img">
-                    </div>
-                    <div class="caja-descripcion">
-                        <p class="titulo-descripcion">Edad</p>
-                        <p class="descripcion">...</p>
-                    </div>
-                </a>
-                <a class="caja" href="jsp/calculadoraBasica.jsp">
-                    <div class="caja-foto">
-                        <img src="imagenes/java-jsp.png" alt="" class="jsp-img">
-                    </div>
-                    <div class="caja-descripcion">
-                        <p class="titulo-descripcion">Calculadora básica</p>
-                        <p class="descripcion">...</p>
-                    </div>
-                </a>
-                <a class="caja" href="#">
-                    <div class="caja-foto">
-                        <img src="imagenes/java-jsp.png" alt="" class="jsp-img">
-                    </div>
-                    <div class="caja-descripcion">
-                        <p class="titulo-descripcion">...</p>
-                        <p class="descripcion">...</p>
-                    </div>
-                </a>
+                </article>
             </div>
-
-        </main>
-        <footer>
-            <div class="info-pag">
-                <p>Sitio creado por Manuel Guill&eacute;n Gallardo</p>
-                <p>Alumno de DAW 2</p>
-                <p>30 / 09 / 2021</p>
-            </div>
-        </footer>
-    </body>
+        </section>
+        <aside>
+            <h2>JSP</h2>
+            <a href="jsp/calculadora.jsp">Primer JSP</a>
+            <a href="jsp/saludo.jsp">Te Saluda</a>
+            <a href="jsp/edad.jsp">Calculando Edad</a>
+            <a href="jsp/calculadoraBasica.jsp">Calculadora básica</a>
+            <a href="jsp/miNombreEnCookies.jsp">Yo y las cookies</a>
+        </aside>
+    </main>
+    <footer>
+        <div class="info-pag">
+            <p>Sitio creado por Manuel Guill&eacute;n Gallardo</p>
+            <p>Alumno de DAW 2</p>
+            <p>30 / 09 / 2021</p>
+        </div>
+    </footer>
+    <script type="text/javascript" src="javascript/buscador.js"></script>
+</body>
 
 </html>
