@@ -1,5 +1,9 @@
-<%@page import="java.net.URLDecoder" %>
-<%@page import="java.net.URLEncoder" %>
+<%-- 
+    Document   : crudCookie
+    Created on : 07-oct-2021, 18:36:21
+    Author     : Manuel Guillén Gallardo
+--%>
+
 <%@page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
 <!DOCTYPE html>
 <html lang="es">
@@ -41,30 +45,37 @@
             <a href="#">Notas</a>
         </nav>
         <main>
+            <div class="titulo-ejercicio">
+                <p>Crud con Cookies</p>
+            </div>
             <div class="contenedor izq">
                 
             </div>
             <div class="contenedor der">
-
-                <% if (request.getParameter("switch") == null) { %>
-
-
-                <form action="miNombreEnCookies.jsp" method="post" class="modulo">
-                    <h1> No tenemos info </h1>
-                    <input type="hidden" name="switch" value="true">
-                    <button type="submit" name="recargar" value="true">Recargar</button>
+                <form action="controllerCrudCookies.jsp" method="post" class="modulo">
+                    <label for="nombreC" >Nombre de la cookie: </label>
+                    <input type="text" id="nombreC" name="nombreC" class="inputUser"></input>
+                    <br>
+                    <label for="valorC" id="valorC" name="valorC" >Valor de la cookie: </label>
+                    <input type="text" id="valorC" name="valorC" class="inputUser"/>
+                    <br>
+                    <div class="menuBotones">
+                        <input type="submit" name="enviar" value="crear"/>
+                        <input type="submit" name="enviar" value="visualizar"/>
+                        <input type="submit" name="enviar" value="modificar"/>
+                        <input type="submit" name="enviar" value="eliminar"/>
+                        <input type="submit" name="enviar" value="inicio"/>
+                    </div>
                 </form>
-                
-                <% } else {
-                    Cookie p = new Cookie("o", URLEncoder.encode("HOla tio", "UTF-8"));
-                    p.setMaxAge(360);
-                    response.addCookie(p);
-                    String resultado = p.getName() + ": "
-                                        + URLDecoder.decode(p.getValue(), "UTF-8");%>
-                <p class="modulo">
-                    <%= resultado%>
-                </p>
-                <% }%>
+                <div class="respuesta">
+                    <% //${respuesta} %>
+                    <%
+                        String re = request.getParameter("clave");
+                        if(re!=null){
+                            out.println(re); 
+                        }
+                    %>
+                </div>
             </div>
         </main>
         <footer>

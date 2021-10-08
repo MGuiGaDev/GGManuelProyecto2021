@@ -1,0 +1,273 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 07-oct-2021, 15:41:03
+    Author     : Manuel Guillén Gallardo
+*/
+
+/**
+ * @author [Manuel Guillén Gallardo]
+ * @email [mguigadev@gmail.com]
+ * @create date 07-10-2021 15:17:43
+ * @modify date 07-10-2021 15:19:08
+ * @desc [description]
+ */
+
+*{
+    background-color: #111111;
+    box-sizing: border-box;
+    color: #727272;
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    user-select: none; 
+}
+body{
+    display: flex;
+    flex-direction: column;
+    font-family: 'Prompt', sans-serif;
+}
+header{
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    padding: 15px;
+    text-decoration: none;
+    width: 100%;
+}
+.search{
+    align-items: center;
+    display: flex;
+    justify-content: center;
+}
+.search input{
+    border: none;
+    border-bottom: 1px solid #727272;
+    color: white;
+    font-size: 16px;
+    padding: 5px;
+    margin-right: 5px;
+}
+.search input:focus{
+    border-bottom:1px solid white;
+    outline: none;
+}
+.search button{
+    border: none;
+    
+    cursor: pointer;
+    color: #727272;
+}
+.search button:hover{
+    color: white;
+}
+.logo{
+    display: flex;
+    flex-direction: column;
+    text-decoration: none;
+}
+.logo h1,.logo p{
+    color: white;
+    text-align: center;
+}
+.logo h1{
+    font-family: 'Permanent Marker', cursive;
+    font-size: 100px;
+    font-weight: 100;
+    text-shadow: 0.3rem 0.3rem 0.3rem black;
+}
+.espacio-hub{
+    display: flex;
+    justify-content: center;
+}
+.logo-github i, .logo-java i{
+    color: #727272;
+    font-size: 25px;
+    margin: 0 15px 0;
+}
+.logo-github i:hover, .logo-java i:hover{
+    color: white;
+}
+header nav {
+    align-items: center;
+    display: flex;
+    justify-content: space-around;
+    height: auto;
+    width: 100%;
+}
+header nav a{
+    align-items: center;
+    color: #727272;
+    display: flex;
+    font-size: 20px;
+    justify-content: center;
+    height: auto;
+    padding: 10px;
+    text-decoration: none;
+    width: auto;
+}
+.menu {
+    display: flex;
+    flex-direction: row;
+    font-size: 20px;
+    justify-content: center;
+    margin-top: 50px;
+    width: 100%;
+}
+.menu a {
+    color: #727272;
+    margin: 0 80px 0;
+}
+nav a:hover{
+    color: white;
+}
+/************=MAIN=***********/
+main {
+    display: grid;
+    grid-template-areas: "titulo-ejercicio titulo-ejercicio "
+                       "izq  der";
+    justify-content: space-around;
+    margin: 40px 0 40px;
+}
+
+.contenedor{
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 20px;
+}
+.titulo-ejercicio{
+    display: flex;
+    justify-content: center;
+    grid-area: titulo-ejercicio;
+    font-weight: lighter;
+    margin: 0 0 40px;
+    text-align: center;
+}
+.titulo-ejercicio p{
+    background: #230653;
+    border: 2px solid transparent;
+    border-radius: 5px;
+    box-shadow:0.1rem 0.5rem 0.8rem black;
+    color: white;
+    font-size: 30px;
+    padding: 10px;
+    width: fit-content;
+}
+.izq {
+    grid-area: izq;
+    width: 400px;
+}
+.der {
+    grid-area: der;
+    width: 600px;
+}
+
+.modulo {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+.inputUser{
+    border: none;
+    border-bottom: 1px solid #727272;
+    color: white;
+    font-size: 16px;
+    padding: 5px;
+}
+.inputUser:focus{
+    border-bottom:1px solid white;
+    outline: none;
+}
+.menuBotones{
+    display: flex;
+    justify-content: space-around;
+    margin-top: 10px;
+}
+.menuBotones input {
+    background: #230653;
+    border: 2px solid transparent;
+    border-radius: 5px;
+    box-shadow:0.1rem 0.5rem 0.8rem black;
+    color: white;
+    cursor: pointer;
+    font-size: 16px;
+    padding: 8px;
+    width: fit-content;
+}
+.menuBotones input:hover {
+    background: #480ca8;
+    border: 2px solid white;
+}
+/***************=RESPUESTA**************************/
+.respuesta {
+    margin-top: 40px;
+    padding: 20px;
+}
+.error{
+    border: 2px solid #e63946;
+    border-radius: 10px;
+    color: white;
+    font-size: 20px;
+    padding: 20px;
+}
+.valido {
+    border: 2px solid #44f276;
+    border-radius: 10px;
+    color: white;
+    font-size: 20px;
+    padding: 20px;
+}
+.tabla {
+    display: flex;
+    flex-direction: row;
+    padding: 20px;
+    width: 100%;
+}
+.tita {
+    color: #44f276;
+    font-size:30px;
+    padding-bottom: 10px;
+    text-align: center;
+}
+.ticol, .col {
+    display: flex;
+    flex-direction: row;
+    height: 100%;
+    justify-content: center;
+    padding: 10px;
+    text-align: center;
+}
+.ticol p, .col p{
+    
+    border: 1px solid white;
+   margin: 0 20px 0;
+   text-align: center;
+}
+/**************=FOOTER=**************/
+footer{
+    align-items: center;
+    border-top: 1px solid #dadada;
+    display: flex;
+    height: 120px;
+    padding: 15px;
+    width: 100%;
+}
+footer, footer .info-pag, footer p{
+    background: black;
+}
+.info-pag{
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    justify-content: space-around;
+    padding: 20px;
+    width: 100%;
+}
+.info-pag p{
+    font-size: 14px;
+    margin: 3px;
+}
