@@ -45,22 +45,22 @@
                     respuesta.append("<p class='error'>Lo sentimos, el nombre elegido ya existe.</p>");
                 }
                 response.sendRedirect(
-                "crudCookie.jsp?clave=" + respuesta);
+                        "crudCookie.jsp?clave=" + respuesta);
                 break;
             case "visualizar":
                 respuesta = visualizarCookie(cookies, respuesta);
                 response.sendRedirect(
-                "crudCookie.jsp?clave=" + respuesta);
+                        "crudCookie.jsp?clave=" + respuesta);
                 break;
             case "modificar":
                 respuesta.append(mensajeUpdate());
                 response.sendRedirect(
-                "crudCookie.jsp?clave=" + respuesta);
+                        "crudCookie.jsp?clave=" + respuesta);
                 break;
             case "eliminar":
                 respuesta.append(mensajeDelete());
                 response.sendRedirect(
-                "crudCookie.jsp?clave=" + respuesta);
+                        "crudCookie.jsp?clave=" + respuesta);
                 break;
             case "inicio":
                 respuesta.append(irInicio());
@@ -68,7 +68,7 @@
                 response.sendRedirect(direccion);
                 break;
         }
-        
+
     }
 
     //request.getSession().setAttribute("respuesta", respuesta);
@@ -89,6 +89,9 @@
                     Cookie co = modificarCookie(nombreCU, valorCU, nuevasCookies);
                     response.addCookie(co);
                     respuesta.append("<p class='valido'> Ha modificado la cookie: " + nombreCU + "</p>");
+                } else {
+                    respuesta.append("<p class='error'> Introduzca el nombre de una cookie existente. Haga click en visualizar para ver las que estan activas</p>");
+
                 }
                 break;
             case "elimino":
@@ -96,6 +99,8 @@
                     Cookie co = eliminarCookie(nombreCD, nuevasCookies);
                     response.addCookie(co);
                     respuesta.append("<p class='valido'> Ha eliminado la cookie: " + nombreCD + "</p>");
+                } else {
+                    respuesta.append("<p class='error'> Introduzca el nombre de una cookie existente. Haga click en visualizar para ver las que estan activas</p>");
                 }
                 break;
         }
@@ -163,7 +168,7 @@
                 co = cookie;
             }
         }
-        return co;  
+        return co;
     }
 
     public StringBuilder irInicio() {
