@@ -31,10 +31,14 @@ Del mismo modo, se tratará de construir tres apartados extra:
 
 Los ejercicios pueden presentar 4 estados:
 
-- ![](https://img.shields.io/badge/build-failing-informational?style=flat&logo=<LOGO_NAME>&logoColor=white&color=db4949) Existe algún **error** grave (o errores) que debo corregir.
-- ![](https://img.shields.io/badge/build-passing-informational?style=flat&logo=<LOGO_NAME>&logoColor=white&color=2bbc8a) Después de haber sido **realizados y revisados** en clase, alcanzan este estado si no existe nada que deba cambiar en ellos.
-- ![](https://img.shields.io/badge/build-in%20progress-informational?style=flat&logo=<LOGO_NAME>&logoColor=white&color=8cd3f6) Presentan **irregularidades** en el estilo o el código implementado.
-- ![](https://img.shields.io/badge/build-unknown-informational?style=flat&logo=<LOGO_NAME>&logoColor=white&color=f0f68c) Cuando estén **pendientes de la corrección**  en clase.
+![](https://img.shields.io/badge/build-failing-informational?style=flat&logo=<LOGO_NAME>&logoColor=white&color=db4949) 
+Existe algún **error** grave (o errores) que debo corregir.
+![](https://img.shields.io/badge/build-passing-informational?style=flat&logo=<LOGO_NAME>&logoColor=white&color=2bbc8a) 
+Después de haber sido **realizados y revisados** en clase, alcanzan este estado si no existe nada que deba cambiar en ellos.
+![](https://img.shields.io/badge/build-in%20progress-informational?style=flat&logo=<LOGO_NAME>&logoColor=white&color=8cd3f6) 
+Presentan **irregularidades** en el estilo o el código implementado.
+![](https://img.shields.io/badge/build-unknown-informational?style=flat&logo=<LOGO_NAME>&logoColor=white&color=f0f68c) 
+Cuando estén **pendientes de la corrección**  en clase.
 
 <hr><a name="herramientas"></a>
 
