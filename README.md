@@ -1,12 +1,8 @@
-# Desarrollo web en entorno servidor
+![cabecera](imagenesReadme/cabecera.png)
 
 
 
-![Oracle-Java-16](imagenesReadme/Oracle-Java-16.jpg)
-
-
-
-## CONTENIDOS
+# CONTENIDOS
 
 1. [Introducción](#introduccion)
 2. [Herramientas](#herramientas)
@@ -15,7 +11,8 @@
 5. [Ejercicios con ``JSP``]( #jsp)
 6. [Recursos](#recursos)
 
-<hr><a name="introduccion"></a>
+<hr style="height: 5px;"><a name="introduccion"></a>
+
 
 # Introducción
 
@@ -47,15 +44,17 @@ Presentan **irregularidades** en el estilo o el código implementado.
 
 Cuando estén **pendientes de la corrección**  en clase.
 
-<hr><a name="herramientas"></a>
+<hr style="height: 5px;"><a name="herramientas"></a>
+
 
 # Herramientas
 
-![(imagenesReadme/java.svg)](https://img.shields.io/badge/code-Java-informational?style=flat&logo=java&logoColor=white&color=2bbc8a)  ![(imagenesReadme/javascript.svg)](https://img.shields.io/badge/code-JavaScript-informational?style=flat&logo=javascript&logoColor=white&color=2bbc8a) ![(imagenesReadme/css3.svg)](https://img.shields.io/badge/code-CSS3-informational?style=flat&logo=css3&logoColor=white&color=2bbc8a)  ![(imagenesReadme/html5.svg)](https://img.shields.io/badge/code-HTML5-informational?style=flat&logo=html5&logoColor=white&color=2bbc8a)  ![(imagenesReadme/apachenetbeanside.svg)](https://img.shields.io/badge/ide-NetBeans-informational?style=flat&logo=apachenetbeanside&logoColor=white&color=2bbc8a)
+![(imagenesReadme/java.svg)](https://img.shields.io/badge/code-Java-informational?style=flat&logo=java&logoColor=white&color=2bbc8a)  ![(imagenesReadme/javascript.svg)](https://img.shields.io/badge/code-JavaScript-informational?style=flat&logo=javascript&logoColor=white&color=2bbc8a) ![(imagenesReadme/css3.svg)](https://img.shields.io/badge/code-CSS3-informational?style=flat&logo=css3&logoColor=white&color=2bbc8a)  ![(imagenesReadme/html5.svg)](https://img.shields.io/badge/code-HTML5-informational?style=flat&logo=html5&logoColor=white&color=2bbc8a)  ![(imagenesReadme/apachenetbeanside.svg)](https://img.shields.io/badge/ide-NetBeans-informational?style=flat&logo=apachenetbeanside&logoColor=white&color=2bbc8a) ![(imagenesReadme/apachetomcat.svg)](https://img.shields.io/badge/server-TomCat-informational?style=flat&logo=apachetomcat&logoColor=white&color=2bbc8a)
 
 
 
-<hr><a name="estado"></a>
+<hr style="height: 5px;"><a name="estado"></a>
+
 
 
 # Estado de los ejercicios
@@ -76,7 +75,8 @@ Cuando estén **pendientes de la corrección**  en clase.
 
 
 
-<hr><a name="servlet"></a>
+<hr style="height: 5px;"><a name="servlet"></a>
+
 
 
 # Ejercicios para ``SERVLETS``
@@ -162,7 +162,8 @@ Cuando estén **pendientes de la corrección**  en clase.
 
 
 
-<hr><a name="jsp"></a>
+<hr style="height: 5px;"><a name="jsp"></a>
+
 
 
 # Ejercicios para ``JSP``
@@ -226,11 +227,12 @@ Cuando estén **pendientes de la corrección**  en clase.
 - **Funcionalidad**:
 - **Finalidad**:
 
-<hr><a name="recursos"></a>
+<hr style="height: 5px;"><a name="recursos"></a>
+
 
 # RECURSOS
 
 - Para implementar ``README.md``:[towardsdatascience](https://towardsdatascience.com/build-a-stunning-readme-for-your-github-profile-9b80434fe5d7)
 
-- Para poner iconos: [simpleicons](https://simpleicons.org/?q=netbea)
+- Para poner iconos: [simpleicons](https://simpleicons.org)
 
