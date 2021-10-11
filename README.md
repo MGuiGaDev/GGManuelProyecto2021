@@ -1,5 +1,4 @@
-![cabecera](imagenesReadme/cabecera.png)
-
+![cabecera](imagenesReadme/cabecera.PNG)
 
 
 # CONTENIDOS
