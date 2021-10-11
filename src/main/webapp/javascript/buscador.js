@@ -6,6 +6,7 @@
  * @desc [Funcionalidades extra de la página]
  */
 
+
 const urls = [
     n = {
         nombre: "html/cicloDeVida.html",

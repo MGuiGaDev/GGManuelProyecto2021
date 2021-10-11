@@ -26,6 +26,7 @@
     response.sendRedirect();
      */
     //jsessionid
+    String direccion = "crudCookie.jsp?clave=";
     StringBuilder respuesta = new StringBuilder();
     Cookie nuevaCookie = null;
     Cookie[] cookies = request.getCookies();
@@ -45,32 +46,35 @@
                     respuesta.append("<p class='error'>Lo sentimos, el nombre elegido ya existe.</p>");
                 }
                 response.sendRedirect(
-                        "crudCookie.jsp?clave=" + respuesta);
+                        direccion + respuesta);
                 break;
             case "visualizar":
                 respuesta = visualizarCookie(cookies, respuesta);
                 response.sendRedirect(
-                        "crudCookie.jsp?clave=" + respuesta);
+                        direccion + respuesta);
                 break;
             case "modificar":
                 respuesta.append(mensajeUpdate());
                 response.sendRedirect(
-                        "crudCookie.jsp?clave=" + respuesta);
+                        direccion + respuesta);
                 break;
             case "eliminar":
                 respuesta.append(mensajeDelete());
                 response.sendRedirect(
-                        "crudCookie.jsp?clave=" + respuesta);
+                        direccion + respuesta);
                 break;
             case "inicio":
                 respuesta.append(irInicio());
-                String direccion = respuesta.toString();
-                response.sendRedirect(direccion);
+                String argumento = respuesta.toString();
+                response.sendRedirect(argumento);
                 break;
         }
 
     }
 
+    //
+    //Si en lugar de pasar aquí en setAtribute respuesta, meto "valor que sea", tendría que hacer un cast
+    //
     //request.getSession().setAttribute("respuesta", respuesta);
 //    Cookie nuevaCookie = crearCookie(".", ".");
 //    response.addCookie(nuevaCookie);
@@ -90,7 +94,7 @@
                     response.addCookie(co);
                     respuesta.append("<p class='valido'> Ha modificado la cookie: " + nombreCU + "</p>");
                 } else {
-                    respuesta.append("<p class='error'> Introduzca el nombre de una cookie existente. Haga click en visualizar para ver las que estan activas</p>");
+                    respuesta.append("<p class='error'> Introduzca el nombre de una cookie existente. Haga click en visualizar para ver las que est&aacute;n activas.</p>");
 
                 }
                 break;
@@ -100,7 +104,7 @@
                     response.addCookie(co);
                     respuesta.append("<p class='valido'> Ha eliminado la cookie: " + nombreCD + "</p>");
                 } else {
-                    respuesta.append("<p class='error'> Introduzca el nombre de una cookie existente. Haga click en visualizar para ver las que estan activas</p>");
+                    respuesta.append("<p class='error'> Introduzca el nombre de una cookie existente. Haga click en visualizar para ver las que est&aacute;n activas.</p>");
                 }
                 break;
         }
@@ -132,8 +136,9 @@
      */
     public StringBuilder visualizarCookie(Cookie[] cookies, StringBuilder respuesta) {
         int contador = 1;
+        String tilde = "&eacute;";
         if (cookies.length <= 1) {
-            respuesta.append("<p class='error'>No ha creado ninguna cookie todavia.</p>");
+            respuesta.append("<p class='error'>No ha creado ninguna cookie todavía.</p>");
         } else {
             respuesta.append("<p class='tita'>COOKIES ACTIVAS</p>");
             respuesta.append("<div class='table'>");

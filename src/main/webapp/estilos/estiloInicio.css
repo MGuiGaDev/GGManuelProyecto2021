@@ -15,6 +15,7 @@ and open the template in the editor.
     margin: 0;
     padding: 0;
     text-decoration: none;
+    user-select: none; 
 }
 body{
     display: flex;
@@ -325,7 +326,12 @@ footer, footer .info-pag, footer p{
     width: 100%;
 }
 .info-pag p{
-    color: #0bfe50;
+    cursor: pointer;
     font-size: 14px;
     margin: 3px;
+    width: fit-content;
+}
+.info-pag p:hover{
+    color: white;
+    width: fit-content;
 }

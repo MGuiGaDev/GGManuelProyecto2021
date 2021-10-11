@@ -15,11 +15,37 @@ and open the template in the editor.
  * @modify date 07-10-2021 15:19:08
  * @desc [description]
  */
-
+/** CONTROLADOR DE SESIONES SESIONES **/
+input[type="date"]::-webkit-calendar-picker-indicator {
+    cursor: pointer;
+    filter: invert(0.5);
+    display: block;
+    width: 20px;
+    height: 20px;
+    border-width: thin;
+}
+input[type=date]{
+   color: #727272;
+   cursor: pointer;
+}
+input[type=date]:hover{
+    color: white;
+}
+input[type="date"]::-webkit-calendar-picker-indicator:hover {
+   filter: invert(1); 
+}
+h2, h3, span {
+    color: white;
+}
+.enlaces{
+    text-decoration: underline;
+}
+/**   FIN CONTROLADOR DE SESIONES       **/
 *{
     background-color: #111111;
     box-sizing: border-box;
     color: #727272;
+    font-weight: lighter;
     margin: 0;
     padding: 0;
     text-decoration: none;
@@ -34,14 +60,15 @@ header{
     align-items: center;
     display: flex;
     flex-direction: row;
+    justify-content: space-around;
     padding: 15px;
-    text-decoration: none;
     width: 100%;
 }
 .search{
     align-items: center;
     display: flex;
     justify-content: center;
+    min-width:  240px;
 }
 .search input{
     border: none;
@@ -49,7 +76,6 @@ header{
     color: white;
     font-size: 16px;
     padding: 5px;
-    margin-right: 5px;
 }
 .search input:focus{
     border-bottom:1px solid white;
@@ -57,7 +83,6 @@ header{
 }
 .search button{
     border: none;
-    
     cursor: pointer;
     color: #727272;
 }
@@ -86,7 +111,7 @@ header{
 .logo-github i, .logo-java i{
     color: #727272;
     font-size: 25px;
-    margin: 0 15px 0;
+    margin: 0 5px 0;
 }
 .logo-github i:hover, .logo-java i:hover{
     color: white;
@@ -126,23 +151,22 @@ nav a:hover{
 }
 /************=MAIN=***********/
 main {
-    display: grid;
-    grid-template-areas: "titulo-ejercicio titulo-ejercicio "
-                       "izq  der";
+    display: flex;
+    flex-direction: column;
     justify-content: space-around;
     margin: 40px 0 40px;
 }
 
 .contenedor{
+    align-items: center;
     display:flex;
     flex-direction: column;
-    justify-content: center;
     padding: 20px;
+    width: 100%;
 }
 .titulo-ejercicio{
     display: flex;
     justify-content: center;
-    grid-area: titulo-ejercicio;
     font-weight: lighter;
     margin: 0 0 40px;
     text-align: center;
@@ -158,12 +182,18 @@ main {
     width: fit-content;
 }
 .izq {
-    grid-area: izq;
-    width: 400px;
+    display: flexbox;
+    flex-direction: column;
+    padding: 20px;
+    min-width: 600px;
+    max-width: 800px;
+}
+code {
+    font-size: 13px !important;
 }
 .der {
-    grid-area: der;
-    width: 600px;
+    padding: 20px;
+     min-width: 600px;
 }
 
 .modulo {
@@ -204,22 +234,30 @@ main {
 }
 /***************=RESPUESTA**************************/
 .respuesta {
+    align-items: center;
     margin-top: 40px;
     padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.respuesta p{
+    color: white;
+}
+.error, .valido {
+    border-radius: 10px;
+    color: white;
+    font-size: 20px;
+    padding: 20px;
+    text-align: center;
+    width: fit-content;
 }
 .error{
     border: 2px solid #e63946;
-    border-radius: 10px;
-    color: white;
-    font-size: 20px;
-    padding: 20px;
+    
 }
 .valido {
     border: 2px solid #44f276;
-    border-radius: 10px;
-    color: white;
-    font-size: 20px;
-    padding: 20px;
 }
 .tabla {
     display: flex;
@@ -268,6 +306,22 @@ footer, footer .info-pag, footer p{
     width: 100%;
 }
 .info-pag p{
+    cursor: pointer;
     font-size: 14px;
     margin: 3px;
+}
+.info-pag p:hover{
+    color: white;
+    width: fit-content;
+}
+
+/*****************RESPUESTA SESIÓN*******************/
+.respuestaSesion{
+    border: 2px solid #44f276;
+    border-radius: 10px;
+    color: white;
+    display: flex;
+    font-size: 20px;
+    padding: 20px;
+    flex-direction: column;
 }
