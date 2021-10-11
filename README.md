@@ -1,6 +1,6 @@
 # DWES
 
-![](https://img.shields.io/badge/code-Java-informational?style=flat&logo=<LOGO_NAME>&logoColor=white&color=2bbc8a)![](https://img.shields.io/badge/code-JavaScript-informational?style=flat&logo=<LOGO_NAME>&logoColor=white&color=2bbc8a)
+![](https://img.shields.io/badge/code-Java-informational?style=flat&logo=<LOGO_NAME>&logoColor=white&color=2bbc8a)  ![](https://img.shields.io/badge/code-JavaScript-informational?style=flat&logo=<LOGO_NAME>&logoColor=white&color=2bbc8a)
 
 
 ## SERVLETS + JSP
