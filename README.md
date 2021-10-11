@@ -2,7 +2,7 @@
 
 
 
-![Oracle-Java-16](C:\Users\manue\OneDrive\Escritorio\DAW2_APUNTES\WORKSPACE_NETBEANS\GGManuelProyecto2021\imagenesReadme\Oracle-Java-16.jpg)
+![Oracle-Java-16](imagenesReadme/Oracle-Java-16.jpg)
 
 
 
