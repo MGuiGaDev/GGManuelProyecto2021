@@ -1,6 +1,6 @@
 # DWES
 
-![](https://img.shields.io/badge/<code>-<Java>-informational?style=flat&logo=<LOGO_NAME>&logoColor=white&color=2bbc8a)
+![](https://img.shields.io/badge/code-Java-informational?style=flat&logo=<LOGO_NAME>&logoColor=white&color=2bbc8a)![](https://img.shields.io/badge/code-JavaScript-informational?style=flat&logo=<LOGO_NAME>&logoColor=white&color=2bbc8a)
 
 
 ## SERVLETS + JSP
@@ -187,3 +187,6 @@
 - **Archivos**:
 - **Funcionalidad**:
 - **Finalidad**:
+
+
+[Debo mirar](https://towardsdatascience.com/build-a-stunning-readme-for-your-github-profile-9b80434fe5d7)
