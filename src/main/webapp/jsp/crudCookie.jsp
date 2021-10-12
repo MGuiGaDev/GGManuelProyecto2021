@@ -39,47 +39,51 @@
                    title="Repositorio DWES"><i class="fab fa-github"></i></a>
                 <a href="https://docs.oracle.com/javaee/7/api/toc.htm" class="logo-java" target="_blank"
                    title="API Java 7 EE"><i class="fab fa-java"></i> </a>
+                <a href="https://docs.oracle.com/javaee/7/api/toc.htm" class="logo-java" target="_blank"
+                   title="Cómo moverte por el sitio"><i class="fas fa-info-circle"></i> </a>
             </nav>
         </header>
         <nav class="menu">
-            <a href="#">Inicio</a>
+            <a href="../inicio.html">Inicio</a>
             <a href="#">Notas</a>
         </nav>
         <main>
-            <div class="titulo-ejercicio">
-                <p>Crud con Cookies</p>
-            </div>
-            <div class="contenedor izq">
-                
-            </div>
-            <div class="contenedor der">
-                <form action="controllerCrudCookies.jsp" method="post" class="modulo">
-                    <label for="nombreC" >Nombre de la cookie: </label>
-                    <input type="text" id="nombreC" name="nombreC" class="inputUser"></input>
-                    <br>
-                    <label for="valorC" id="valorC" name="valorC" >Valor de la cookie: </label>
-                    <input type="text" id="valorC" name="valorC" class="inputUser"/>
-                    <br>
-                    <div class="menuBotones">
-                        <input type="submit" name="enviar" value="crear"/>
-                        <input type="submit" name="enviar" value="visualizar"/>
-                        <input type="submit" name="enviar" value="modificar"/>
-                        <input type="submit" name="enviar" value="eliminar"/>
-                        <input type="submit" name="enviar" value="inicio"/>
+            <div class="contenedor">
+                <div class="arriba">
+                    <form action="controllerCrudCookies.jsp" method="post" class="modulo">
+                        <h2>CRUD de cookies</h2><br>
+                        <label for="nombreC" >Nombre de la cookie: </label>
+                        <input type="text" id="nombreC" name="nombreC" class="inputUser"></input>
+                        <br>
+                        <label for="valorC" id="valorC" name="valorC" >Valor de la cookie: </label>
+                        <input type="text" id="valorC" name="valorC" class="inputUser"/>
+                        <br>
+                        <div class="menuBotones">
+                            <input type="submit" name="enviar" value="crear" class="botonAccion"/>
+                            <input type="submit" name="enviar" value="visualizar" class="botonAccion"/>
+                            <input type="submit" name="enviar" value="modificar" class="botonAccion"/>
+                            <input type="submit" name="enviar" value="eliminar" class="botonAccion"/>
+                            <input type="submit" name="enviar" value="inicio" class="botonAccion"/>
+                        </div>
+                    </form>
+                    <div class="respuesta">
+                        <% //${respuesta} %>
+                        <%
+                            request.setCharacterEncoding("UTF-8");
+                            String re = request.getParameter("clave");
+
+                            if (re != null) {
+                                out.println(re);
+                            }
+                        %>
                     </div>
-                </form>
-                <div class="respuesta">
-                    <% //${respuesta} %>
-                    <%
-                        request.setCharacterEncoding("UTF-8");
-                        String re = request.getParameter("clave");
-                        
-                        if(re!=null){
-                            out.println(re); 
-                        }
-                    %>
+                </div>
+
+                <div class="abajo">
+
                 </div>
             </div>
+
         </main>
         <footer>
             <div class="info-pag">

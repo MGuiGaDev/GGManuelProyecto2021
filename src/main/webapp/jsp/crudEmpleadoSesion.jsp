@@ -55,7 +55,7 @@
             </div>
             <div class="contenedor">
 
-                <div class="der">
+                <div class="arriba">
                     <form action="controladorCrudEmpleadoSesion.jsp" method="post" class="modulo">
                         <h2>CRUD de Atributos de sesión</h2><br>
                         <label for="nombreAtributo" >Nombre de atributo de sesión: </label>
@@ -71,11 +71,11 @@
                         <input type="text" id="salarioEmpleado" name="salarioEmpleado" class="inputUser" placeholder="Eg. 1250.23"/>
                         <br>
                         <div class="menuBotones">
-                            <input type="submit" name="enviar" value="crear"/>
-                            <input type="submit" name="enviar" value="visualizar"/>
-                            <input type="submit" name="enviar" value="modificar"/>
-                            <input type="submit" name="enviar" value="eliminar"/>
-                            <input type="submit" name="enviar" value="inicio"/>
+                            <input type="submit" name="enviar" value="crear" class="botonAccion"/>
+                            <input type="submit" name="enviar" value="visualizar" class="botonAccion"/>
+                            <input type="submit" name="enviar" value="modificar" class="botonAccion"/>
+                            <input type="submit" name="enviar" value="eliminar" class="botonAccion"/>
+                            <input type="submit" name="enviar" value="inicio" class="botonAccion"/>
                         </div>
                     </form>
                     <div class="respuesta">
@@ -88,7 +88,7 @@
 
                     </div>
                 </div>
-                <div class="izq">
+                <div class="abajo">
                     <h2>Observaciones</h2>
                     <p>El punto más importante de este ejercicio es la gestión de atributos de la sesión de un usuario. Para ello, debemos poder validar y convertir los datos que el usuario introducirá en nuestro formulario.</p>
 

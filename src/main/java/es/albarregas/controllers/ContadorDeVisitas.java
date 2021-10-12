@@ -7,10 +7,9 @@ package es.albarregas.controllers;
 
 import java.io.IOException;
 import java.io.PrintWriter;
-import java.util.Enumeration;
-import java.util.Map;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
+import javax.servlet.http.Cookie;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
@@ -19,10 +18,27 @@ import javax.servlet.http.HttpServletResponse;
  *
  * @author Manuel Guillén Gallardo
  */
-@WebServlet(name = "MetodoEnvio", urlPatterns = {"/MetodoEnvio"})
-public class MetodoEnvio extends HttpServlet {
+@WebServlet(name = "ContadorDeVisitas", urlPatterns = {"/ContadorDeVisitas"})
+public class ContadorDeVisitas extends HttpServlet {
 
-/**
+    private int contadorNumerico = 0;
+    final String contador = "1";
+    final Cookie visita = new Cookie("visita", contador);
+    private StringBuilder respuesta = new StringBuilder();
+
+    /**
+     * Processes requests for both HTTP <code>GET</code> and <code>POST</code>
+     * methods.
+     *
+     * @param request servlet request
+     * @param response servlet response
+     * @throws ServletException if a servlet-specific error occurs
+     * @throws IOException if an I/O error occurs
+     */
+    
+
+    // <editor-fold defaultstate="collapsed" desc="HttpServlet methods. Click on the + sign on the left to edit the code.">
+    /**
      * Handles the HTTP <code>GET</code> method.
      *
      * @param request servlet request
@@ -76,24 +92,27 @@ public class MetodoEnvio extends HttpServlet {
                     + "<p>Contador de visitas</p>"
                     + "</div>"
                     + "<div class=\"contenedor\">"
-                    + "<div class=\"valido respuestaCorta\">");
-            out.println("<h1>Estoy en doGet</h1>");
-            Enumeration<String> nombres = request.getParameterNames();
-            while(nombres.hasMoreElements()) {
-                String nombre = nombres.nextElement();
-                out.println("<p>El valor del parámetro " + nombre + " tiene un valor de " 
-                        + request.getParameter(nombre) + "</p>");
-                if(nombre.equalsIgnoreCase("numero")) {
-                    out.println("<p>El producto de 4 por " + request.getParameter(nombre) + 
-                            " es igual a " + Double.valueOf(request.getParameter(nombre)) * 4 +"</p>");
-                }
-                if(nombre.equalsIgnoreCase("error") && request.getParameter("error").equalsIgnoreCase("1")) {
-                    out.println("Todos los campos son obligatorios");
-                }
-            }
-            out.println("</div></div>"
+                    + "<div class=\"valido\">");
+            visita.setMaxAge(3600);
+            contadorNumerico += 1;
+            visita.setValue(String.valueOf(contadorNumerico));
+            String veces = (Integer.parseInt(visita.getValue())) > 1 ? "veces" : "vez";
+            out.println("<h3 style=\"text-align: center;\" >Has visitado la página " + visita.getValue() + " " + veces + " </h3>"
+                    + "<h3 style=\"text-align: center;\">Información de la cookie</h3>"
+                    + "<p style=\"text-align: center;\">Caducidad: " + visita.getMaxAge() + "</p>"
+                    + "<p style=\"text-align: center;\">Nombre: " + visita.getName() + "</p>"
+                    + "<p style=\"text-align: center;\">Segura: " + visita.getSecure() + "</p>"
+                    + "<p style=\"text-align: center;\">Versión: " + visita.getVersion() + "</p></div>"
+                    + "<div class=\"modulo\"> <br>"
+                    + "<form action=\"ContadorDeVisitas\" method=\"post\" class=\"menuBotones\">"
+                    + "<input type=\"submit\" name=\"enviar\" value=\"recargar\" class=\"botonAccion\"/>"
+                    + "<input type=\"submit\" name=\"enviar\" value=\"eliminar\" class=\"botonAccion\"/>"
+                    + "<input type=\"submit\" name=\"enviar\" value=\"inicio\" class=\"botonAccion\"/>"
+                    + "</form>");
+
+            out.println("</form></div></div>"
                     + "</main>"
-                    + "<footer class='footerFix'>>"
+                    + "<footer>"
                     + "<div class=\"info-pag\">"
                     + "<p>Sitio creado por Manuel Guill&eacute;n Gallardo</p>"
                     + "<p>Alumno de DAW 2</p>"
@@ -109,6 +128,7 @@ public class MetodoEnvio extends HttpServlet {
             out.println("</body>");
             out.println("</html>");
         }
+
     }
 
     /**
@@ -122,8 +142,29 @@ public class MetodoEnvio extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        response.setContentType("text/html;charset=UTF-8");
+        switch (request.getParameter("enviar")) {
+            
+            
+            case "recargar":
+                contadorNumerico += 1;
+                visita.setValue(String.valueOf(contadorNumerico));
+                response.addCookie(visita);
+                respuesta.setLength(0);
+                respuesta.append("<h3 style=\"text-align: center;\">Has visitado la p&aacute;gina ").append(visita.getValue()).append(" veces</h3></div><br>");
+                break;
+            case "eliminar":
+                contadorNumerico = 0;
+                visita.setMaxAge(contadorNumerico);
+                visita.setValue("0");
+                response.addCookie(visita);
+                respuesta.setLength(0);
+                respuesta.append("<h3 style=\"text-align: center;\">El contador de visitas ha sido eliminado.</h3></div><br>");
+                break;
+            case "inicio":
+                break;
+        }
         try (PrintWriter out = response.getWriter()) {
+
             /* TODO output your page here. You may use following sample code. */
             out.println("<!DOCTYPE html>");
             out.println("<html lang=\"es\">");
@@ -164,26 +205,18 @@ public class MetodoEnvio extends HttpServlet {
                     + "<p>Contador de visitas</p>"
                     + "</div>"
                     + "<div class=\"contenedor\">"
-                    + "<div class=\"valido respuestaCorta\">");
-            Map<String, String[]> datos = request.getParameterMap();
-            for (Map.Entry<String, String[]> entrada : datos.entrySet()) {
-                if (!entrada.getKey().startsWith("env")) {
+                    + "<div class=\"valido\">");
 
-                    out.println("<p>" + entrada.getKey() + ": ");
+            out.println(respuesta);
+            out.println("<div class=\"modulo\"><form action=\"ContadorDeVisitas\" method=\"post\" class=\"menuBotones\">"
+                    + "<input type=\"submit\" name=\"enviar\" value=\"recargar\" class=\"botonAccion\"/>"
+                    + "<input type=\"submit\" name=\"enviar\" value=\"eliminar\" class=\"botonAccion\"/>"
+                    + "<input type=\"submit\" name=\"enviar\" value=\"inicio\" class=\"botonAccion\"/>"
+                    + "</form>");
 
-                    for (String valor : entrada.getValue()) {
-                        out.println("<strong>");
-                        out.println(valor);
-
-                        out.println("</strong>");
-                    }
-                    out.println("</p>");
-                }
-
-            }
-            out.println("</div></div>"
+            out.println("</form></div></div>"
                     + "</main>"
-                    + "<footer class='footerFix'>"
+                    + "<footer class=\"footerFix\">"
                     + "<div class=\"info-pag\">"
                     + "<p>Sitio creado por Manuel Guill&eacute;n Gallardo</p>"
                     + "<p>Alumno de DAW 2</p>"
@@ -198,8 +231,8 @@ public class MetodoEnvio extends HttpServlet {
 
             out.println("</body>");
             out.println("</html>");
-            
         }
+
     }
 
     /**

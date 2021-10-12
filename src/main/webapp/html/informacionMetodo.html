@@ -7,37 +7,74 @@ and open the template in the editor.
 <!DOCTYPE html>
 <html lang="es">
     <head>
-        <title>INICIO</title>
+        <meta http-equiv="Content-Type" content ="text/html" charset="utf-8" />
+        <title>INFORMACIÓN Y MÉTODO</title>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link href="../estilos/estiloInformacionMetodo.css" type="text/css" rel="stylesheet">
-        <link href="https://fonts.googleapis.com/css2?family=Varela+Round&display=swap" rel="stylesheet">
+        <link href="../estilos/estiloVista.css" type="text/css" rel="stylesheet">
+        <link href="../estilos/prism.css" rel="stylesheet">
+        <link
+            href="https://fonts.googleapis.com/css2?family=Prompt:wght@200&family=Permanent+Marker&display=swap"
+            rel="stylesheet">
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+        <link rel="shortcut icon" href="imagenes/favicon.ico" type="image/x-icon">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+              integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf"
+              crossorigin="anonymous">
+
     </head>
 
-    <body>
+    <body id="informacion">
         <header>
-            <h1><a href="../inicio.html">DWES</a></h1>
-            <a href="https://github.com/MGuiGaDev" class="logo-github" target="_blank"><img src="../imagenes/github.png" /></a>
+            <nav class="search">
+                <input type="text" placeholder="Eg. Formulario" id="buscador">
+                <a href="" class="material-icons" id="boton-buscador">search</a>
+            </nav>
+            <a href="../inicio.html" class="logo">
+                <h1>DweS</h1>
+                <p>Desarrollo web en entorno servidor</p>
+            </a>
+            <nav class="espacio-hub">
+                <a href="https://github.com/MGuiGaDev" class="logo-github" target="_blank"
+                   title="Repositorio DWES"><i class="fab fa-github"></i></a>
+                <a href="https://docs.oracle.com/javaee/7/api/toc.htm" class="logo-java" target="_blank"
+                   title="API Java 7 EE"><i class="fab fa-java"></i> </a>
+                <a href="https://docs.oracle.com/javaee/7/api/toc.htm" class="logo-java" target="_blank"
+                   title="Cómo moverte por el sitio"><i class="fas fa-info-circle"></i> </a>
+            </nav>
         </header>
+        <nav class="menu">
+            <a href="../inicio.html">Inicio</a>
+            <a href="#">Notas</a>
+        </nav>
         <main>
-            <div class="caja">
-                <h2>Llamadas a Servlets</h2>
-                <p><a href="../Informacion">Informaci&oacute;n del contexto</a></p>
-                <p><a href="../MetodoEnvio?saludo=hola&numero=12.8&error=0">Llamadas por el método GET</a></p>
-                <form action="../MetodoEnvio" method="post">
-                    <input type="hidden" name="param1" value="hola mundo"/>
-                    <input type="hidden" name="param2" value="ahora no llueve"/>
-                    <input type="submit" value="Enviar" name="enviar"/>
-                </form>
+            <div class="contenedor">
+                <div class="titulo-ejercicio">
+                    <p>Llamadas a Servlets</p>
+                </div>
+                <div class="arriba">
+                    <p><a href="../Informacion" class="botonAccion">Informaci&oacute;n del contexto</a></p><br><br><br>
+                    <p><a href="../MetodoEnvio?saludo=hola&numero=12.8&error=0" class="botonAccion">Llamadas por el método GET</a></p><br>
+                    <form action="../MetodoEnvio" method="post" class="modulo unInput"><br>
+                        <input type="hidden" name="param1" value="hola mundo" class="botonAccion"/>
+                        <input type="hidden" name="param2" value="ahora no llueve" class="botonAccion"/>
+                        <input type="submit" value="Enviar" name="enviar" class="botonAccion"/>
+                    </form>
+                </div>
             </div>
         </main>
         <footer>
             <div class="info-pag">
-                <p>Sitio creado por Manuel Guillén Gallardo</p>
+                <p>Sitio creado por Manuel Guill&eacute;n Gallardo</p>
                 <p>Alumno de DAW 2</p>
                 <p>30 / 09 / 2021</p>
             </div>
+            <div class="info-pag">
+                <p>Asignatura: Desarrollo web en entorno servidor</p>
+                <p>Profesor: Jesús García Garijo</p>
+                <p>IES Albarregas (Mérida)</p>
+            </div>
         </footer>
+        <script type="text/javascript" src="../javascript/buscador.js"></script>
     </body>
 
 </html>

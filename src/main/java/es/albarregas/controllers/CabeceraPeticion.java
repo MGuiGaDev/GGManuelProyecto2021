@@ -60,26 +60,69 @@ public class CabeceraPeticion extends HttpServlet {
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         
-        response.setContentType("text/html;charset=ISO8859-1");
+        response.setContentType("text/html;charset=UTF-8");
         try (PrintWriter out = response.getWriter()) {
+
             /* TODO output your page here. You may use following sample code. */
-            /* http://www.w3big.com/es/servlet/servlet-internationalization.html */
             out.println("<!DOCTYPE html>");
             out.println("<html lang=\"es\">");
-            out.println("<head>");
-            out.println("<title>Servlet CabeceraPeticion</title>");            
-            out.println("<link href=\"estilos/estiloCabeceraPeticion.css\" type=\"text/css\" rel=\"stylesheet\">");
-            out.println("</head>");
-            out.println("<body>");
-            out.println("<header><h1><a href='inicio.html'>DWES</a></h1><a href=\"https://github.com/MGuiGaDev\" class=\"logo-github\" target=\"_blank\"><img src=\"imagenes/github.png\" /></a></header>");
-            out.println("<main><div class=\"caja\">");
+            out.println("<head>"
+                    + "<meta http-equiv=\"Content-Type\" content =\"text/html\" charset=\"utf-8\" />"
+                    + "<title>CONTADOR DE VISITAS</title>"
+                    + "<meta http-equiv=\"Content-Type\" content=\"text/html; charset=UTF-8\">"
+                    + "<link href=\"estilos/estiloVista.css\" type=\"text/css\" rel=\"stylesheet\">"
+                    + "<link href=\"../estilos/prism.css\" rel=\"stylesheet\">"
+                    + "<link href=\"https://fonts.googleapis.com/css2?family=Prompt:wght@200&family=Permanent+Marker&display=swap\" rel=\"stylesheet\">"
+                    + "<link href=\"https://fonts.googleapis.com/icon?family=Material+Icons\" rel=\"stylesheet\">"
+                    + "<link rel=\"shortcut icon\" href=\"imagenes/favicon.ico\" type=\"image/x-icon\">"
+                    + "<link rel=\"stylesheet\" href=\"https://use.fontawesome.com/releases/v5.8.1/css/all.css\" "
+                    + "     integrity=\"sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf\" crossorigin=\"anonymous\">"
+                    + "</head>"
+                    + "<body>"
+                    + "<header>"
+                    + "<nav class=\"search\">"
+                    + "<input type=\"text\" placeholder=\"Eg. Formulario\" id=\"buscador\">"
+                    + "<a href=\"\" class=\"material-icons\" id=\"boton-buscador\">search</a>"
+                    + "</nav>"
+                    + "<a href=\"inicio.html\" class=\"logo\">"
+                    + "<h1>DweS</h1>"
+                    + "<p>Desarrollo web en entorno servidor</p>"
+                    + "</a>"
+                    + "<nav class=\"espacio-hub\">"
+                    + "<a href=\"https://github.com/MGuiGaDev\" class=\"logo-github\" target=\"_blank\" title=\"Repositorio DWES\"><i class=\"fab fa-github\"></i></a>"
+                    + "<a href=\"https://docs.oracle.com/javaee/7/api/toc.htm\" class=\"logo-java\" target=\"_blank\" title=\"API Java 7 EE\"><i class=\"fab fa-java\"></i> </a>"
+                    + "<a href=\"https://docs.oracle.com/javaee/7/api/toc.htm\" class=\"logo-java\" target=\"_blank\" title=\"Cómo moverte por el sitio\"><i class=\"fas fa-info-circle\"></i> </a>"
+                    + "</nav>"
+                    + "</header>"
+                    + "<nav class=\"menu\">"
+                    + "<a href=\"inicio.html\">Inicio</a>"
+                    + "<a href=\"#\">Notas</a>"
+                    + "</nav>"
+                    + "<main>"
+                    + "<div class=\"titulo-ejercicio\">"
+                    + "<p>Cabeceras</p>"
+                    + "</div>"
+                    + "<div class=\"contenedor\">"
+                    + "<div class=\"valido\">");
             Enumeration <String> nombresCabeceraPeticion = request.getHeaderNames();
             while(nombresCabeceraPeticion.hasMoreElements()){
                 String nombre = nombresCabeceraPeticion.nextElement();
-                out.println("<p><span class='nombreCabecera'>" + traductor(nombre) + "</span><br> "  + request.getHeader(nombre)+"</p>");
+                out.println("<p style='text-align:left;'><span class='nombreCabecera'>" + traductor(nombre) + "</span> "  + request.getHeader(nombre)+"</p>");
             }
-            out.println("</div></main>");
-            out.println("<footer><div class=\"info-pag\"><p>Sitio creado por Manuel Guillén Gallardo</p><p>Alumno de DAW 2</p><p>30 / 09 / 2021</p></div></footer>");
+            out.println("</div></div></main>"
+                    + "<footer>"
+                    + "<div class=\"info-pag\">"
+                    + "<p>Sitio creado por Manuel Guill&eacute;n Gallardo</p>"
+                    + "<p>Alumno de DAW 2</p>"
+                    + "<p>30 / 09 / 2021</p>"
+                    + "</div>"
+                    + "<div class=\"info-pag\">"
+                    + "<p>Asignatura: Desarrollo web en entorno servidor</p>"
+                    + "<p>Profesor: Jesús García Garijo</p>"
+                    + "<p>IES Albarregas (Mérida)</p>"
+                    + "</div>"
+                    + "</footer>");
+
             out.println("</body>");
             out.println("</html>");
         } 

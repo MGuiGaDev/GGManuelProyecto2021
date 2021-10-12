@@ -7,7 +7,72 @@ and open the template in the editor.
     Created on : 26-sep-2021, 6:45:24
     Author     : Manuel Guillén Gallardo
 */
+.subirPagina{
+    background: transparent;
+    cursor: pointer;
+    position: fixed;
+    bottom: 18%;
+    right: 20px;
+}
+.subirPagina i{
+    text-shadow: 0.1rem 0.1rem 0.3rem rgba(0,0,0,0.3);
+    background: transparent;
+    font-size: 40px;
+}
+.subirPagina i:hover{
+    color:white;
+}
 
+.contenedorModal{
+    background-color: rgba(0,0,0,0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+
+    position: fixed;
+    pointer-events: none;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100vw;
+    transition: opacity 0.5 ease;
+}
+
+.show{
+    pointer-events: auto;
+    opacity: 1;
+}
+.infoModal{
+    border-radius: 5px;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    width: 1000px;
+    max-width: 100%;
+    padding: 30px 50px;
+}
+.cerrarInfoModal{
+    background: transparent;
+    border: none;
+    cursor: pointer;
+}
+
+.cerrarInfoModal i {
+    border: none;
+    cursor: pointer;
+    color: #e63946;
+    background: transparent;
+    font-size: 40px;
+}
+.infoModal p{
+    color: #e63946;
+    background: transparent;
+    margin-left: 10px;
+    font-weight: bold;
+    font-size: 30px;
+
+}
 *{
     background-color: #111111;
     box-sizing: border-box;
@@ -26,14 +91,15 @@ header{
     align-items: center;
     display: flex;
     flex-direction: row;
+    justify-content: space-around;
     padding: 15px;
-    text-decoration: none;
     width: 100%;
 }
 .search{
     align-items: center;
     display: flex;
     justify-content: center;
+    min-width:  240px;
 }
 .search input{
     border: none;
@@ -41,7 +107,6 @@ header{
     color: white;
     font-size: 16px;
     padding: 5px;
-    margin-right: 5px;
 }
 .search input:focus{
     border-bottom:1px solid white;
@@ -49,7 +114,6 @@ header{
 }
 .search button{
     border: none;
-    
     cursor: pointer;
     color: #727272;
 }
@@ -77,8 +141,9 @@ header{
 }
 .logo-github i, .logo-java i{
     color: #727272;
+    cursor: pointer;
     font-size: 25px;
-    margin: 0 15px 0;
+    margin: 0 5px 0;
 }
 .logo-github i:hover, .logo-java i:hover{
     color: white;
@@ -121,7 +186,8 @@ main{
     display: flex;
     flex-direction: row;
     justify-content: center;
-    margin: 100px 0 60px;
+    margin: 100px 0 40px;
+    min-height: 500px;
 }
 aside, section{
     align-items: center;
@@ -175,27 +241,23 @@ section {
     margin: 20px 0 70px;
 }
 .imagen{
+    background: rgb(88,211,228);
+    background: linear-gradient(106deg, rgba(88,211,228,1) 0%, rgba(147,35,233,1) 100%);
+    border-radius: 10px;
     display: flex;
+    filter: opacity(60%);
     justify-content: center;
+    padding: 10px;
     width: 50%;
 }
-.imagen img {
-    border-top-left-radius: 400px;
-    border-top-right-radius: 40px;
-    border-bottom-left-radius: 10px;
-    border-bottom-right-radius: 200px;
-    box-shadow:0.8rem 0.8rem 0.8rem black;
-    cursor: pointer;
-    filter: opacity(60%);
-    width: 90%;
-}
-.imagen img:hover{
+
+.imagen:hover{
     filter: opacity(100%);
 }
 .dos img{
     border-radius: 10px;
     box-shadow:0.8rem 0.8rem 0.8rem black;
-    width: 100%;
+    width: 70%;
 }
 .texto{
     align-items: center;

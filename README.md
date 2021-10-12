@@ -2,7 +2,8 @@
 
 
 
-# CONTENIDOS
+<hr style="height: 5px; background: #24292F;">
+# Contenidos
 
 1. [Introducción](#introduccion)
 2. [Herramientas](#herramientas)
@@ -11,10 +12,8 @@
 5. [Ejercicios con ``JSP``]( #jsp)
 6. [Recursos](#recursos)
 
-<hr style="height: 5px;"><a name="introduccion"></a>
-
-
-# Introducción
+<hr style="height: 5px; background: #24292F;"><a name="introduccion"></a>
+# 1. Introducción
 
 En este repositorio vamos a ir acumulando todos los **ejercicios** que realizamos sobre **``SERVLETS`` y ``JSP``**. 
 
@@ -30,56 +29,54 @@ Los ejercicios pueden presentar 4 estados:
 
 ![](https://img.shields.io/badge/build-failing-informational?style=flat&logo=<LOGO_NAME>&logoColor=white&color=db4949) 
 
-Existe algún **error** grave (o errores) que debo corregir.
+​		- Existe algún **error** grave (o errores) que debo corregir.
 
 ![](https://img.shields.io/badge/build-passing-informational?style=flat&logo=<LOGO_NAME>&logoColor=white&color=2bbc8a) 
 
-Después de haber sido **realizados y revisados** en clase, alcanzan este estado si no existe nada que deba cambiar en ellos.
+​		- Después de haber sido **realizados y revisados** en clase, alcanzan este estado si no existe nada que deba cambiar en ellos.
 
 ![](https://img.shields.io/badge/build-in%20progress-informational?style=flat&logo=<LOGO_NAME>&logoColor=white&color=8cd3f6) 
 
-Presentan **irregularidades** en el estilo o el código implementado.
+​		- Presentan **irregularidades** en el estilo o el código implementado.
 
 ![](https://img.shields.io/badge/build-unknown-informational?style=flat&logo=<LOGO_NAME>&logoColor=white&color=f0f68c) 
 
-Cuando estén **pendientes de la corrección**  en clase.
-
-<hr style="height: 5px;"><a name="herramientas"></a>
+​		- Cuando estén **pendientes de la corrección**  en clase.
 
 
-# Herramientas
+
+<hr style="height: 5px; background: #24292F;"><a name="herramientas"></a>
+# 2. Herramientas
 
 ![(imagenesReadme/java.svg)](https://img.shields.io/badge/code-Java-informational?style=flat&logo=java&logoColor=white&color=2bbc8a)  ![(imagenesReadme/javascript.svg)](https://img.shields.io/badge/code-JavaScript-informational?style=flat&logo=javascript&logoColor=white&color=2bbc8a) ![(imagenesReadme/css3.svg)](https://img.shields.io/badge/code-CSS3-informational?style=flat&logo=css3&logoColor=white&color=2bbc8a)  ![(imagenesReadme/html5.svg)](https://img.shields.io/badge/code-HTML5-informational?style=flat&logo=html5&logoColor=white&color=2bbc8a)  ![(imagenesReadme/apachenetbeanside.svg)](https://img.shields.io/badge/ide-NetBeans-informational?style=flat&logo=apachenetbeanside&logoColor=white&color=2bbc8a) ![(imagenesReadme/apachetomcat.svg)](https://img.shields.io/badge/server-TomCat-informational?style=flat&logo=apachetomcat&logoColor=white&color=2bbc8a)
 
 
 
-<hr style="height: 5px;"><a name="estado"></a>
+<hr style="height: 5px; background: #24292F;"><a name="estado"></a>
+
+# 3. Estado de los ejercicios
+
+| SERVLET                            | ESTADO                                                       | JSP                          | ESTADO                                                       |
+| ---------------------------------- | ------------------------------------------------------------ | ---------------------------- | ------------------------------------------------------------ |
+| 1. Hola Mundo                      | ![](https://img.shields.io/badge/build-passing-informational?style=flat&logo=<LOGO_NAME>&logoColor=white&color=2bbc8a) | 1. Calculadora muy básica    | ![](https://img.shields.io/badge/build-passing-informational?style=flat&logo=<LOGO_NAME>&logoColor=white&color=2bbc8a) |
+| 2. Ciclo de vida (Servlet)         | ![](https://img.shields.io/badge/build-passing-informational?style=flat&logo=<LOGO_NAME>&logoColor=white&color=2bbc8a) | 2. Saludo                    | ![](https://img.shields.io/badge/build-passing-informational?style=flat&logo=<LOGO_NAME>&logoColor=white&color=2bbc8a) |
+| 3. Formulario Simple               | ![](https://img.shields.io/badge/build-passing-informational?style=flat&logo=<LOGO_NAME>&logoColor=white&color=2bbc8a) | 3. Edad de una personas      | ![](https://img.shields.io/badge/build-passing-informational?style=flat&logo=<LOGO_NAME>&logoColor=white&color=2bbc8a) |
+| 4. Formulario Complejo             | ![](https://img.shields.io/badge/build-passing-informational?style=flat&logo=<LOGO_NAME>&logoColor=white&color=2bbc8a) | 4. Calculadora básica        | ![](https://img.shields.io/badge/build-in%20progress-informational?style=flat&logo=<LOGO_NAME>&logoColor=white&color=8cd3f6) |
+| 5. Reservas                        |                                                              | 5. Monedero                  |                                                              |
+| 6. Registro                        |                                                              | 6. Mi nombre con cookies     | ![](https://img.shields.io/badge/build-failing-informational?style=flat&logo=<LOGO_NAME>&logoColor=white&color=db4949) |
+| 7. Cabeceras de petición           | ![](https://img.shields.io/badge/build-passing-informational?style=flat&logo=<LOGO_NAME>&logoColor=white&color=2bbc8a) | 7. Gestión de cookies        | ![](https://img.shields.io/badge/build-failing-informational?style=flat&logo=<LOGO_NAME>&logoColor=white&color=db4949) |
+| 8. Contador de visitas (cookie)    | ![](https://img.shields.io/badge/build-unknown-informational?style=flat&logo=<LOGO_NAME>&logoColor=white&color=f0f68c) | 8. Gestión de sesiones       | ![](https://img.shields.io/badge/build-in%20progress-informational?style=flat&logo=<LOGO_NAME>&logoColor=white&color=8cd3f6) |
+| 9. Contador de visitas (sesiones)  | ![](https://img.shields.io/badge/build-unknown-informational?style=flat&logo=<LOGO_NAME>&logoColor=white&color=f0f68c) | 9. Proceso de identificación |                                                              |
+| 10. Información del cliente        |                                                              | 10. Carrito de la compra     |                                                              |
+| 11. Configurando los Servlets      |                                                              |                              |                                                              |
+| 12. Gestión declarativa de errores |                                                              |                              |                                                              |
+| 13. Leer fichero                   |                                                              |                              |                                                              |
 
 
 
-# Estado de los ejercicios
+<hr style="height: 5px; background: #24292F;"><a name="servlet"></a>
 
-| SERVLET                            | ESTADO                                                       | JSP                                 | ESTADO                                                       |
-| ---------------------------------- | ------------------------------------------------------------ | ----------------------------------- | ------------------------------------------------------------ |
-| 1. Hola Mundo                      | ![](https://img.shields.io/badge/build-in%20progress-informational?style=flat&logo=<LOGO_NAME>&logoColor=white&color=8cd3f6) | 1. Saludo                           | ![](https://img.shields.io/badge/build-in%20progress-informational?style=flat&logo=<LOGO_NAME>&logoColor=white&color=8cd3f6) |
-| 2. Ciclo de vida de u              | ![](https://img.shields.io/badge/build-in%20progress-informational?style=flat&logo=<LOGO_NAME>&logoColor=white&color=8cd3f6) | 2. Edad de una                      | ![](https://img.shields.io/badge/build-in%20progress-informational?style=flat&logo=<LOGO_NAME>&logoColor=white&color=8cd3f6) |
-| 3. Formulario Simple               | ![](https://img.shields.io/badge/build-in%20progress-informational?style=flat&logo=<LOGO_NAME>&logoColor=white&color=8cd3f6) | 3. Calculadora básica               | ![](https://img.shields.io/badge/build-in%20progress-informational?style=flat&logo=<LOGO_NAME>&logoColor=white&color=8cd3f6) |
-| 4. Formulario Complejo             | ![](https://img.shields.io/badge/build-in%20progress-informational?style=flat&logo=<LOGO_NAME>&logoColor=white&color=8cd3f6) | 4. Monedero                         |                                                              |
-| 5. Reservas                        |                                                              | 5. Mi nombre con cookies            |                                                              |
-| 6. Registro                        |                                                              | 6. Operaciones básicas con sesiones | ![](https://img.shields.io/badge/build-unknown-informational?style=flat&logo=<LOGO_NAME>&logoColor=white&color=f0f68c) |
-| 7. Cabeceras de petición           | ![](https://img.shields.io/badge/build-in%20progress-informational?style=flat&logo=<LOGO_NAME>&logoColor=white&color=8cd3f6) | 7. Contador de visitas con sesiones | ![](https://img.shields.io/badge/build-unknown-informational?style=flat&logo=<LOGO_NAME>&logoColor=white&color=f0f68c) |
-| 8. Información del cliente         |                                                              | 8. Proceso de identificación        |                                                              |
-| 9. Configurando los Servlets       |                                                              | 9. Carrito de la compra             |                                                              |
-| 10. Gestión declarativa de errores |                                                              |                                     |                                                              |
-| 11. Leer fichero                   |                                                              |                                     |                                                              |
-
-
-
-<hr style="height: 5px;"><a name="servlet"></a>
-
-
-
-# Ejercicios para ``SERVLETS``
+# 4. Ejercicios para ``SERVLETS``
 
 ## Ciclo de vida de un Servlet
 
@@ -162,11 +159,9 @@ Cuando estén **pendientes de la corrección**  en clase.
 
 
 
-<hr style="height: 5px;"><a name="jsp"></a>
+<hr style="height: 5px; background: #24292F;"><a name="jsp"></a>
 
-
-
-# Ejercicios para ``JSP``
+# 5. Ejercicios para ``JSP``
 
 
 
@@ -177,19 +172,35 @@ Cuando estén **pendientes de la corrección**  en clase.
 - **Finalidad**:
 
 ![saludoFormulario.PNG](imagenesReadme/saludoFormulario.PNG)
+
+
+
 ![saludoRespuesta.PNG](imagenesReadme/saludoRespuesta.PNG)
+
+
+
 ## Edad de una persona
 
 - **Archivos**:
+
 - **Funcionalidad**:
+
 - **Finalidad**:
-![edadForm.PNG](imagenesReadme/edadForm.PNG)
-![edadRespuesta.PNG](imagenesReadme/edadRespuesta.PNG)
+  ![edadForm.PNG](imagenesReadme/edadForm.PNG)
+
+  
+
+  ![edadRespuesta.PNG](imagenesReadme/edadRespuesta.PNG)
+
+
+
 ## Calculadora básica
 
 - **Archivos**:
 - **Funcionalidad**:
 - **Finalidad**:
+
+
 
 ## Monedero
 
@@ -197,11 +208,15 @@ Cuando estén **pendientes de la corrección**  en clase.
 - **Funcionalidad**:
 - **Finalidad**:
 
+
+
 ## Mi nombre con cookies
 
 - **Archivos**:
 - **Funcionalidad**:
 - **Finalidad**:
+
+
 
 ## Operaciones básicas con...
 
@@ -209,11 +224,15 @@ Cuando estén **pendientes de la corrección**  en clase.
 - **Funcionalidad**:
 - **Finalidad**:
 
+
+
 ## Contador de visitas con...
 
 - **Archivos**:
 - **Funcionalidad**:
 - **Finalidad**:
+
+
 
 ## Proceso de identificación
 
@@ -221,16 +240,18 @@ Cuando estén **pendientes de la corrección**  en clase.
 - **Funcionalidad**:
 - **Finalidad**:
 
+
+
 ## Carrito de la compra
 
 - **Archivos**:
 - **Funcionalidad**:
 - **Finalidad**:
 
-<hr style="height: 5px;"><a name="recursos"></a>
+<hr style="height: 5px; background: #24292F;"><a name="recursos"></a>
 
 
-# RECURSOS
+# 6. RECURSOS
 
 - Para implementar ``README.md``:[towardsdatascience](https://towardsdatascience.com/build-a-stunning-readme-for-your-github-profile-9b80434fe5d7)
 

@@ -16,33 +16,10 @@ and open the template in the editor.
  * @desc [description]
  */
 /** CONTROLADOR DE SESIONES SESIONES **/
-input[type="date"]::-webkit-calendar-picker-indicator {
-    cursor: pointer;
-    filter: invert(0.5);
-    display: block;
-    width: 20px;
-    height: 20px;
-    border-width: thin;
-}
-input[type=date]{
-   color: #727272;
-   cursor: pointer;
-}
-input[type=date]:hover{
-    color: white;
-}
-input[type="date"]::-webkit-calendar-picker-indicator:hover {
-   filter: invert(1); 
-}
-h2, h3, span {
-    color: white;
-}
-.enlaces{
-    text-decoration: underline;
-}
+
 /**   FIN CONTROLADOR DE SESIONES       **/
 *{
-    background-color: #111111;
+    
     box-sizing: border-box;
     color: #727272;
     font-weight: lighter;
@@ -51,7 +28,9 @@ h2, h3, span {
     text-decoration: none;
     user-select: none; 
 }
+
 body{
+    background-color: #111111;
     display: flex;
     flex-direction: column;
     font-family: 'Prompt', sans-serif;
@@ -149,11 +128,10 @@ header nav a{
 nav a:hover{
     color: white;
 }
-/************=MAIN=***********/
+/************=MAIN***********/
 main {
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
     margin: 40px 0 40px;
 }
 
@@ -161,6 +139,7 @@ main {
     align-items: center;
     display:flex;
     flex-direction: column;
+    justify-content: center;
     padding: 20px;
     width: 100%;
 }
@@ -171,7 +150,7 @@ main {
     margin: 0 0 40px;
     text-align: center;
 }
-.titulo-ejercicio p{
+.titulo-ejercicio > p{
     background: #230653;
     border: 2px solid transparent;
     border-radius: 5px;
@@ -181,25 +160,39 @@ main {
     padding: 10px;
     width: fit-content;
 }
-.izq {
+.abajo {
+    border-radius: 5px;
     display: flexbox;
     flex-direction: column;
     padding: 20px;
     min-width: 600px;
     max-width: 800px;
 }
+.abajo, .abajo h2, .abajo h3, .abajo p{
+    background-color:  white !important;
+    color: black;
+}
 code {
     font-size: 13px !important;
 }
-.der {
+.arriba {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     padding: 20px;
-     min-width: 600px;
+    min-width: 650px;
 }
 
 .modulo {
     display: flex;
     flex-direction: column;
     justify-content: space-around;
+    min-width: 650px;
+}
+.modulo h2 {
+    color: white;
+    font-weight: lighter;
 }
 .inputUser{
     border: none;
@@ -217,7 +210,7 @@ code {
     justify-content: space-around;
     margin-top: 10px;
 }
-.menuBotones input {
+.botonAccion {
     background: #230653;
     border: 2px solid transparent;
     border-radius: 5px;
@@ -228,7 +221,7 @@ code {
     padding: 15px;
     width: fit-content;
 }
-.menuBotones input:hover {
+.botonAccion:hover {
     background: #480ca8;
     border: 2px solid white;
 }
@@ -324,4 +317,58 @@ footer, footer .info-pag, footer p{
     font-size: 20px;
     padding: 20px;
     flex-direction: column;
+}
+
+
+/*****************INFORMACION-METODO********************/
+/*modulo*/
+.unInput{
+    align-items: center;
+}
+
+
+/************ESTILO COMÚN PARA TAGS**********/
+input {
+    background: transparent;
+    font-family:'Prompt', sans-serif;
+}
+
+input[type="date"]::-webkit-calendar-picker-indicator {
+    cursor: pointer;
+    filter: invert(0.5);
+    display: block;
+    width: 20px;
+    height: 20px;
+    border-width: thin;
+}
+input[type="date"]::-webkit-calendar-picker-indicator:hover {
+   filter: invert(1); 
+}
+input[type=date]{
+   color: #727272;
+   cursor: pointer;
+}
+input[type=date]:hover{
+    color: white;
+}
+input, button, image, i{
+    cursor: pointer;
+}
+h2, h3, span {
+    font-weight: bold;
+}
+
+/*********************ESTILO COMÚN PARA CLASES DE ELEMENTO COMUNES***************************/
+
+.enlaces{
+    text-decoration: underline;
+}
+.respuestaCorta {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.footerFix{
+    margin-top: 200px;
 }

@@ -14,14 +14,14 @@
 
     </head>
 
-    <body>
+    <body id="ancla">
         <header>
             <nav class="search">
                 <input type="text" placeholder="Eg. Formulario" id="buscador">
                 <a href="" class="material-icons" id="boton-buscador">search</a>
             </nav>
             <a href="inicio.html" class="logo">
-                <h1>DweS</h1>
+                <h1 >DweS</h1>
                 <p>Desarrollo web en entorno servidor</p>
             </a>
             <nav class="espacio-hub">
@@ -29,6 +29,8 @@
                         class="fab fa-github"></i></a>
                 <a href="https://docs.oracle.com/javaee/7/api/toc.htm" class="logo-java" target="_blank"
                    title="API Java 7 EE"><i class="fab fa-java"></i> </a>
+                <a  class="logo-java"
+                   title="Cómo moverte por el sitio" id="botonInfo" ><i class="fas fa-info-circle"></i></a>
             </nav>
         </header>
         <nav class="menu">
@@ -36,13 +38,16 @@
             <a href="#">Notas</a>
         </nav>
         <main>
+            <a class="subirPagina" href="#ancla"><i class="fas fa-sort-up"></i></a>
             <!-- ./html/creacionFormulario.html [EN CONSTRUCCION]-->
             <aside>
                 <h2>SERVLETS</h2>
                 <a href="html/cicloDeVida.html">Ciclo de vida</a>
-                <a href="html/informacionMetodo.html">Información y Método</a>
-                <a href="html/creacionFormulario.html">Primer Formulario</a>
+                <a href="html/informacionMetodo.html">Formulario simple</a>
+                <a href="html/creacionFormulario.html">Formulario complejo</a>
                 <a href="CabeceraPeticion">Request Header</a>
+                <a href="ContadorDeVisitas">Contador de visitas (cookie)</a>
+                <a href="ContadorDeVisitas">Contador de visitas (session)</a>
             </aside>
             <section>
                 <h2>FUNDAMENTALES</h2>
@@ -54,14 +59,14 @@
                             <a href="html/creacionFormulario.html">Visitar</a>
                         </div>
                         <div class="imagen dos">
-                            <img src="imagenes/form.jpg" alt="">
+                            <img src="imagenes/formularioComplejo.PNG" alt="">
                         </div>
                     </article>
                 </div>
             </section>
             <aside>
                 <h2>JSP</h2>
-                <a href="jsp/calculadora.jsp">Primer JSP</a>
+                <a href="jsp/calculadora.jsp">Calculadora muy básica</a>
                 <a href="jsp/saludo.jsp">Te Saluda</a>
                 <a href="jsp/edad.jsp">Calculando Edad</a>
                 <a href="jsp/calculadoraBasica.jsp">Calculadora básica</a>
@@ -69,6 +74,20 @@
                 <a href="jsp/crudCookie.jsp">Gestión de cookies</a>
                 <a href="jsp/crudEmpleadoSesion.jsp">Gestión de sesiones</a>
             </aside>
+            <div class="contenedorModal" id="contenedorModal">
+                <div class="infoModal" id="infoModal">
+                    <p style="text-align: center; font-size: 40px; font-weight: bold;">EN CONSTRUCCIÓN</p>
+                    <p>Falta:</p>
+                    <p>&#149; JSP: eliminar métodos en "calculando edad" y "yo y las cookies".</p>
+                    <p>&#149; JSP: estilo "calculadora básica" y "yo y las cookies".</p>
+                    <p>&#149; Cambiar código a "gestión de cookies".</p>
+                    <p>&#149; Implementar "notas".</p>
+                    <p>&#149; Implementar "buscador".</p>
+                    <p>&#149; Implementar "información".</p>
+                    <p>&#149; Actualizar contenidos "Readme.md".</p><br>
+                    <button id="cerrarInfoModal" class="cerrarInfoModal"><i class="far fa-times-circle"></i></button>
+                </div>
+            </div>
         </main>
         <footer>
             <div class="info-pag">
@@ -83,6 +102,7 @@
             </div>
         </footer>
         <script type="text/javascript" src="javascript/buscador.js"></script>
+        <script type="text/javascript" src="javascript/modal.js"></script>
     </body>
 
 </html>
