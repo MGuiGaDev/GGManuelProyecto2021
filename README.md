@@ -1,5 +1,4 @@
-![cabecera](imagenesReadme/cabecera.png)
-
+![cabecera](imagenesReadme/cabecera.PNG)
 
 
 <hr style="height: 5px; background: #24292F;">
