@@ -2,6 +2,7 @@
 
 
 <hr style="height: 5px; background: #24292F;">
+
 # Contenidos
 
 1. [Introducción](#introduccion)
@@ -12,6 +13,7 @@
 6. [Recursos](#recursos)
 
 <hr style="height: 5px; background: #24292F;"><a name="introduccion"></a>
+
 # 1. Introducción
 
 En este repositorio vamos a ir acumulando todos los **ejercicios** que realizamos sobre **``SERVLETS`` y ``JSP``**. 
