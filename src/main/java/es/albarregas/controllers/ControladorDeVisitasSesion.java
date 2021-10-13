@@ -18,13 +18,13 @@ import javax.servlet.http.HttpServletResponse;
  *
  * @author Manuel Guillén Gallardo
  */
-@WebServlet(name = "ContadorDeVisitas", urlPatterns = {"/ContadorDeVisitas"})
-public class ContadorDeVisitas extends HttpServlet {
+@WebServlet(name = "ControladorDeVisitasSesion", urlPatterns = {"/ControladorDeVisitasSesion"})
+public class ControladorDeVisitasSesion extends HttpServlet {
 
     private int contadorNumerico = 0;
-    private String contador = "1";
-    private Cookie visita = new Cookie("visita", contador);
+    final String contador = "1";
     private StringBuilder respuesta = new StringBuilder();
+
     /**
      * Processes requests for both HTTP <code>GET</code> and <code>POST</code>
      * methods.
@@ -34,7 +34,9 @@ public class ContadorDeVisitas extends HttpServlet {
      * @throws ServletException if a servlet-specific error occurs
      * @throws IOException if an I/O error occurs
      */
-    
+    protected void processRequest(HttpServletRequest request, HttpServletResponse response)
+            throws ServletException, IOException {
+    }
 
     // <editor-fold defaultstate="collapsed" desc="HttpServlet methods. Click on the + sign on the left to edit the code.">
     /**
@@ -90,28 +92,16 @@ public class ContadorDeVisitas extends HttpServlet {
                     + "<div class=\"titulo-ejercicio\">"
                     + "<p>Contador de visitas</p>"
                     + "</div>"
-                    + "<div class=\"contenedor\">"
-                    + "<div class=\"valido\">");
-            visita.setMaxAge(3600);
-            contadorNumerico += 1;
-            visita.setValue(String.valueOf(contadorNumerico));
-            String veces = (Integer.parseInt(visita.getValue())) > 1 ? "veces" : "vez";
-            out.println("<h3 style=\"text-align: center;\" >Has visitado la página " + visita.getValue() + " " + veces + " </h3>"
-                    + "<h3 style=\"text-align: center;\">Información de la cookie</h3>"
-                    + "<p style=\"text-align: center;\">Caducidad: " + visita.getMaxAge() + "</p>"
-                    + "<p style=\"text-align: center;\">Nombre: " + visita.getName() + "</p>"
-                    + "<p style=\"text-align: center;\">Segura: " + visita.getSecure() + "</p>"
-                    + "<p style=\"text-align: center;\">Versión: " + visita.getVersion() + "</p></div>"
-                    + "<div class=\"modulo\"> <br>"
-                    + "<form action=\"ContadorDeVisitas\" method=\"post\" class=\"menuBotones\">"
+                    + "<div class=\"contenedor\">");
+            out.println("<div><input type=\"checkbox\" name=\"enviar\" value=\"eliminar\" class=\"botonAccion\"/> Eliminar</div>");
+            out.println("<div class=\"modulo\"><form action=\"ContadorDeVisitas\" method=\"post\" class=\"menuBotones\">"
                     + "<input type=\"submit\" name=\"enviar\" value=\"recargar\" class=\"botonAccion\"/>"
-                    + "<input type=\"submit\" name=\"enviar\" value=\"eliminar\" class=\"botonAccion\"/>"
                     + "<input type=\"submit\" name=\"enviar\" value=\"inicio\" class=\"botonAccion\"/>"
                     + "</form>");
 
             out.println("</form></div></div>"
                     + "</main>"
-                    + "<footer>"
+                    + "<footer class=\"footerFix\">"
                     + "<div class=\"info-pag\">"
                     + "<p>Sitio creado por Manuel Guill&eacute;n Gallardo</p>"
                     + "<p>Alumno de DAW 2</p>"
@@ -127,7 +117,6 @@ public class ContadorDeVisitas extends HttpServlet {
             out.println("</body>");
             out.println("</html>");
         }
-
     }
 
     /**
@@ -143,20 +132,15 @@ public class ContadorDeVisitas extends HttpServlet {
             throws ServletException, IOException {
         response.setContentType("text/html;charset=UTF-8");
         switch (request.getParameter("enviar")) {
-            
-            
+
             case "recargar":
                 contadorNumerico += 1;
-                visita.setValue(String.valueOf(contadorNumerico));
-                response.addCookie(visita);
+                request.getSession().setAttribute("visita", contadorNumerico);
                 respuesta.setLength(0);
-                respuesta.append("<h3 style=\"text-align: center;\">Has visitado la p&aacute;gina ").append(visita.getValue()).append(" veces</h3></div><br>");
+                respuesta.append("<h3 style=\"text-align: center;\">Has visitado la p&aacute;gina ").append(request.getSession().getAttribute("visita")).append(" veces</h3></div><br>");
                 break;
             case "eliminar":
-                contadorNumerico = 0;
-                visita.setMaxAge(contadorNumerico);
-                visita.setValue("0");
-                response.addCookie(visita);
+                request.getSession().removeAttribute("visita");
                 respuesta.setLength(0);
                 respuesta.append("<h3 style=\"text-align: center;\">El contador de visitas ha sido eliminado.</h3></div><br>");
                 break;
@@ -208,9 +192,9 @@ public class ContadorDeVisitas extends HttpServlet {
                     + "<div class=\"valido\">");
 
             out.println(respuesta);
+            out.println("<div><input type=\"checkbox\" name=\"enviar\" value=\"eliminar\"/> Eliminar</div>");
             out.println("<div class=\"modulo\"><form action=\"ContadorDeVisitas\" method=\"post\" class=\"menuBotones\">"
                     + "<input type=\"submit\" name=\"enviar\" value=\"recargar\" class=\"botonAccion\"/>"
-                    + "<input type=\"submit\" name=\"enviar\" value=\"eliminar\" class=\"botonAccion\"/>"
                     + "<input type=\"submit\" name=\"enviar\" value=\"inicio\" class=\"botonAccion\"/>"
                     + "</form>");
 
@@ -232,7 +216,6 @@ public class ContadorDeVisitas extends HttpServlet {
             out.println("</body>");
             out.println("</html>");
         }
-
     }
 
     /**
