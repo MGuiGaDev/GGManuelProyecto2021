@@ -18,6 +18,7 @@
      * {@link #direccion} contiene la dirección a la cual conduciremos la
      * información
      */
+    // NUNCA ASIGNAS UN VALOR AL PARÁMETRO clave
     StringBuilder direccion = new StringBuilder("crudEmpleadoSesion.jsp?clave=");
 
     /**
@@ -63,6 +64,7 @@
         if (request.getParameter("nombreAtributo").length() != 0) {
             System.out.println("entro en if");
             String nombreAtributoUsuario = request.getParameter("nombreAtributo");
+            // AL HACER CASTING A STRING ES POSIBLE QUE EL SUELDO NO SE CAPTURE BIEN
             String nombreAtributo = (String) request.getSession().getAttribute(nombreAtributoUsuario);
             boolean esNumerico = respuestaSalario.matches("[+]?\\d*(\\.\\d+)?");
 
@@ -90,6 +92,7 @@
                                 + "</p><p>&#149; <b>Salario</b>: "
                                 + empleado.getSalario() + "</p></div>");
                         respuestaAccion.append("<p class='valido'>El atributo ha sido creado.</p>");
+                        // EN REALIDAD NO ESTAS GUARDANDO UN OBJETO EMPLEADO SINO UNA STRING
                         request.getSession().setAttribute(nombreAtributoUsuario, datosEmpleado.toString());
                     }
                     break;
@@ -99,6 +102,7 @@
                     } else {
                         respuestaAccion.append("<div class='respuestaSesion'><p>El atributo <b>" + nombreAtributoUsuario.toUpperCase() + "</b> tiene los siguientes valores: " + "<br>");
                         respuestaAccion.append(request.getSession().getAttribute(nombreAtributoUsuario));
+                        // EL NOMBRE DEL ATRIBUTO DE SESIÓN NO HAY QUE PASARLO COMO EL VALOR DE UN ATRIBUTO DE SESIÓN
                     }
                     break;
                 case "modificar":
